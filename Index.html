@@ -722,12 +722,13 @@
     }
 
     .accordion-body.open {
+      /* Establishes the initial visual state and space for the open body */
       max-height: 1000px; /* Suficientemente grande para todo el contenido */
       padding: 1.5rem;
       background: rgba(0,0,0,.3);
       border-radius: 8px;
     }
-
+    
     .dish-list {
       list-style: none;
       padding: 0;
@@ -1223,11 +1224,11 @@
                 <div class="tab-panel active" data-tab-content="full_menu">
 
                     <div class="accordion reveal">
-                        <button class="accordion-header active" data-accordion-toggle="accordion_pdf_tapas" data-i18n="accordion_pdf_tapas">
+                        <button class="accordion-header first-accordion" data-accordion-toggle="accordion_pdf_tapas" data-i18n="accordion_pdf_tapas">
                             Para picar y disfrutar juntos
                             <i class="fa fa-angle-down icon"></i>
                         </button>
-                        <div class="accordion-body open" id="accordion_pdf_tapas">
+                        <div class="accordion-body" id="accordion_pdf_tapas">
                             <ul class="dish-list">
                                 <li>
                                     <h3 data-i18n="dish_pdf_1_name">Foie hecho por el Xef <span>22,50 €</span></h3>
@@ -1328,15 +1329,15 @@
                                 </li>
                                 <li>
                                     <h3 data-i18n="dish_dessert_2_name">TATIN DE POMA <span>7,25 €</span></h3>
-                                    <p data-i18n="dish_dessert_2_desc">con su helado de armanyac y ciruelas maceradas.</p>
+                                    <p data-i18n="dish_dessert_2_desc">amb el seu geladet d'armanyac i prunes macerades.</p>
                                 </li>
                                 <li>
                                     <h3 data-i18n="dish_dessert_3_name">EL CULANT <span>8,75 €</span></h3>
-                                    <p data-i18n="dish_dessert_3_desc">coulant pecaminoso de chocolate a medio hacer con aceite de oliva y una pizca de sal.</p>
+                                    <p data-i18n="dish_dessert_3_desc">culant pecaminós de xocolata a mig fer amb oli d'oliva i una pesigadeta de sal.</p>
                                 </li>
                                 <li>
                                     <h3 data-i18n="dish_dessert_4_name">GELATS PER PECAR A QUALSEVOL HORA <span>5,75 €</span></h3>
-                                    <p data-i18n="dish_dessert_4_desc">Sabores: almendra tostada y turrón, Chocolate 70%, sorbete de cítricos y verduras, Sorbete de limón, Helado de Kefir y Lima, Helado de frambuesas silvestres, Helado de Pistacho, Helado de Mango. (Precio por sabor)</p>
+                                    <p data-i18n="dish_dessert_4_desc">Sabores: almendra tostada y turrón, Xocolata 70%, sorbet de cítrics i verdures, Sorbete de llimona, Gelat de Kèfir i Llima, Gelat de gerds silvestres, Gelat de Pistatxo, Gelat de Mango. (Precio por sabor)</p>
                                 </li>
                             </ul>
                         </div>
@@ -1434,7 +1435,7 @@
         <footer>
             <div class="container">
                 <p class="text-center" style="opacity: .8; font-size: .85rem; padding: 2rem 0;">
-                    &copy; <span id="current-year"></span> Borda Vella · Gastronomia de Muntanya · <span data-i18n="title_subtitle">Encamp, Andorra</span>
+                    © <span id="current-year"></span> Borda Vella · Gastronomia de Muntanya · <span data-i18n="title_subtitle">Encamp, Andorra</span>
                 </p>
             </div>
         </footer>
@@ -1557,7 +1558,7 @@
                 dish_pdf_1_name: "Foie hecho por el Xef",
                 dish_pdf_1_desc: "El foie que acaricia el paladar, fet per el Xef Manel.",
                 dish_pdf_2_name: "Carpaccio de filet de vaca vella amb foie, oli de tòfona",
-                dish_pdf_2_desc: "BRUTAL!!!",
+                dish_pdf_2_desc: "BRUTAL!!! Carpaccio de solomillo de vaca vieja.",
                 dish_pdf_3_name: "Carpacció d'entrecot de vedella Gallega",
                 dish_pdf_3_desc: "De l'Albert Adrià (si, aquell!!!), intens i soborós.",
                 dish_pdf_4_name: "Carpacció de gamba amb un gelat",
@@ -1747,7 +1748,7 @@
                 cellar_p2: "Nuestro sommelier ha elaborado una carta de vinos que sorprende y acompaña cada plato. Trabajamos directamente con bodegas que comparten nuestra pasión por el producto y la historia.",
                 cellar_p3: "<strong>Consejo del Sommelier:</strong> No dudes en preguntar nuestra selección de <strong data-i18n=\"cellar_p3_strong1\">grandes reservas</strong> de tintos, perfectos para la brasa, o nuestros <strong data-i18n=\"cellar_p3_strong2\">vinos blancos de altura</strong>, ideales para la cocina de montaña.",
                 cellar_p3_strong1: "grandes reservas",
-                cellar_p3_strong2: "vins blancs d'altura",
+                cellar_p3_strong2: "vins blancos de altura",
                 wine_section_title: "Nuestra Selección Destacada:",
                 wine_1_name: "Crianza (Ribera del Duero)",
                 wine_1_desc: "Envejecido 18 meses, con notas de vainilla y fruta madura.",
@@ -1779,6 +1780,145 @@
                 modal_h2: "Reserva tu Mesa",
                 modal_p1: "Usa este formulario rápido para reservar tu mesa. Recibirás una confirmación en unos minutos.",
                 modal_p2: "Para reservas de más de 8 personas, por favor, llámanos directamente al +376 831 308.",
+            },
+            en: {
+                title: "Borda Vella · Mountain Gastronomy in Encamp",
+                title_subtitle: "Encamp · Andorra",
+                nav_history: "History",
+                nav_gastronomy: "Gastronomy",
+                nav_cellar: "Cellar",
+                nav_contact: "Contact",
+                nav_book_desktop: "Book a Table",
+                hero_kicker: "Since 1972",
+                hero_h1: "The authentic mountain gastronomy of Andorra.",
+                hero_p1: "The ideal meeting point in Encamp. Grill cuisine, local produce, and a wine list that will surprise you.",
+                hero_book_cta: "Book Now",
+                hero_menu_cta: "View Menu",
+                hero_phone: "Or call us: ",
+                hero_phone_number: "+376 831 308",
+                hero_card_badge: "Open Today",
+                hero_card_p: "Leave us your details and we'll send you a confirmation in minutes. For groups of more than 8, please call us.",
+                hero_scroll: "Scroll",
+
+                // History
+                history_eyebrow: "Our History",
+                history_h2: "From Old Farmhouse to Gastronomic Reference.",
+                history_p1: "Borda Vella was born over 50 years ago as a farmhouse and transformed into the high mountain cuisine restaurant we know today. We maintain the soul of the old building with a rustic and elegant interior.",
+                history_p2: "Our old wood and mountain stone tell a story of tradition and passion for authentic cuisine, updated with local produce and impeccable technique.",
+                history_pill_1_title: "Mountain Cuisine",
+                history_pill_1_text: "Pioneer in Andorran high cuisine.",
+                history_pill_2_title: "Local Produce",
+                history_pill_2_text: "Commitment to Andorran producers.",
+                history_pill_3_title: "Over 50 Years",
+                history_pill_3_text: "Serving tradition since 1972.",
+
+                // Experiences
+                experiences_eyebrow: "Borda Vella Experiences",
+                experiences_h2: "Fire, mountain, wine, and private celebrations.",
+                experiences_card_1_title: "Grill Cuisine",
+                experiences_card_1_p: "Our local beef and lamb chops, cooked on the grill to perfection. The heart of our kitchen.",
+                experiences_card_2_title: "Tasting & Pairing",
+                experiences_card_2_p: "Book an exclusive tasting in our cellar. Our sommelier will guide you through our 100+ wine references, perfect to accompany our menu.",
+                experiences_cta: "Book your experience",
+
+                // Gastronomy (Single Tab & Accordions)
+                gastronomy_eyebrow: "Our Menu",
+                gastronomy_h2: "The best mountain cuisine, reinvented.",
+                gastronomy_p1: "From grilled classics and mountain rice dishes to seasonal plates with an avant-garde touch.",
+                gastronomy_tab_1: "Full Menu",
+
+                // SECTIONS (ACCORDIONS)
+                accordion_pdf_tapas: "Something to nibble and enjoy together",
+                accordion_hot_starters: "The Art of Cooking Well",
+                accordion_meat_main: "The Main Course",
+                accordion_desserts_main: "The Last Bite",
+
+                // DISHES (New, Section 1)
+                dish_pdf_1_name: "Chef's Foie Gras",
+                dish_pdf_1_desc: "The palate-caressing foie gras, made by Chef Manel.",
+                dish_pdf_2_name: "Old Cow Carpaccio with Foie and Truffle Oil",
+                dish_pdf_2_desc: "BRUTAL!!! Old cow sirloin carpaccio.",
+                dish_pdf_3_name: "Galician Veal Entrecôte Carpaccio",
+                dish_pdf_3_desc: "By Albert Adrià, intense and flavorful.",
+                dish_pdf_4_name: "Shrimp Carpaccio with Ice Cream",
+                dish_pdf_4_desc: "With an ice cream that takes you straight to the coast.",
+                dish_pdf_5_name: "Caprese with Italian Burrata, Lime-Basil, and Tomato Ice Cream",
+                dish_pdf_5_desc: "With burrata, basil and tomato ice creams, pesto, and Kalamata olive.",
+                dish_pdf_6_name: "Anchovies from Santoña",
+                dish_pdf_6_desc: "Don Bocarte, 6 fillets to share, or not...",
+                dish_pdf_7_name: "Gilda",
+                dish_pdf_7_desc: "Small, salty, and with a lot of nerve.",
+                dish_pdf_8_name: "Folgueroles Bread with Tomato, Oil, and Salt",
+                dish_pdf_8_desc: "Optional Bread: Regular Bread (€1.75) or Gluten-free Bread (€3.50).",
+
+                // DISHES (Existing, Section 2)
+                dish_9_name: "12-HOUR SLOW TIME BROTH",
+                dish_9_desc: "with ricotta and Grana Padano ravioli with black truffle cheese shavings.",
+                dish_10_name: "CRISPY GYOZAS",
+                dish_10_desc: "Of beef cheek with honey, bathed in curry sauce and scarmoza cheese that will make you dip bread.",
+                dish_11_name: "JOBLESS LOBSTER (but with a lot of style)",
+                dish_11_desc: "with organic farm egg, grandma's potatoes, and a bit of spicy chorizo.",
+                dish_12_name: "CANDIED ARTICHOKES",
+                dish_12_desc: "with black truffle paste and foie, tender and delicate.",
+
+                // DISHES (Existing, Section 3)
+                dish_meat_1_name: "BEEF CHEEK THAT FALLS APART",
+                dish_meat_1_desc: "falls apart on its own, with a sweet touch of cocoa and parmentier.",
+                dish_meat_2_name: "CROWNED OLD COW FILLET",
+                dish_meat_2_desc: "bathed in ceps sauce, and crowned with a jewel: pan-seared foie escalope.",
+                dish_meat_3_name: "LAMB SHOULDER THAT FEELS LIKE A BIG FEAST",
+                dish_meat_3_desc: "Lamb Shank with real white beans.",
+
+                // DISHES (Existing, Section 4)
+                dish_dessert_1_name: "MANEL'S CHEESECAKE",
+                dish_dessert_1_desc: "So creamy it seems illegal, with that perfect touch that makes you sin.",
+                dish_dessert_2_name: "APPLE TATIN",
+                dish_dessert_2_desc: "with its Armagnac ice cream and marinated plums.",
+                dish_dessert_3_name: "THE COULANT",
+                dish_dessert_3_desc: "sinful chocolate molten cake with olive oil and a pinch of salt.",
+                dish_dessert_4_name: "ICE CREAMS TO SIN AT ANY TIME",
+                dish_dessert_4_desc: "Flavors: toasted almond and nougat, 70% Chocolate, citrus and vegetable sorbet, Lemon sorbet, Kefir and Lime Ice Cream, Wild raspberry Ice Cream, Pistachio Ice Cream, Mango Ice Cream. (Price per flavor)",
+
+                // Cellar (Wine Cellar)
+                cellar_eyebrow: "Our Cellar",
+                cellar_h2: "Mountain wines, great classics, and appellations of origin.",
+                cellar_p1: "We have a carefully selected collection of over 100 wine references. From the jewels of Andorra to the great D.O.s of the world, designed to harmonize with our cuisine.",
+                cellar_h3: "Passion for the Glass",
+                cellar_p2: "Our sommelier has created a wine list that surprises and accompanies every dish. We work directly with wineries that share our passion for the product and history.",
+                cellar_p3: "<strong>Sommelier's Tip:</strong> Don't hesitate to ask about our selection of <strong data-i18n=\"cellar_p3_strong1\">great red reserves</strong>, perfect for the grill, or our <strong data-i18n=\"cellar_p3_strong2\">high altitude white wines</strong>, ideal for mountain cuisine.",
+                cellar_p3_strong1: "great red reserves",
+                cellar_p3_strong2: "high altitude white wines",
+                wine_section_title: "Our Featured Selection:",
+                wine_1_name: "Crianza (Ribera del Duero)",
+                wine_1_desc: "Aged 18 months, with notes of vanilla and ripe fruit.",
+                wine_2_name: "High Altitude Wine (DO Costers del Segre)",
+                wine_2_desc: "Mineral white wine, perfect for fish and soft cheeses.",
+                wine_3_name: "Bordeaux Grand Cru",
+                wine_3_desc: "A selection of great reserves, perfect for our aged meats.",
+
+                // Contact
+                contact_eyebrow: "Contact and Location",
+                contact_h2: "We await you in Encamp.",
+                contact_p1: "If you want to book, the quick form above is the best option. For private events, do not hesitate to call us.",
+                contact_find_us: "How to find us",
+                contact_address: "Carrer Major, s/n, AD200 Encamp, Andorra",
+                contact_gps: "GPS: 42.5342, 1.5835",
+                contact_schedule_title: "Schedule",
+                contact_schedule_1: "Monday - Saturday: 1:00 PM - 3:30 PM / 8:00 PM - 11:00 PM",
+                contact_schedule_2: "Sunday: Closed (Except Holidays)",
+
+                // Forms
+                form_name: "Name",
+                form_email: "Email",
+                form_phone: "Phone",
+                form_date: "Date",
+                form_time: "Time",
+                form_people: "Diners",
+                form_message: "Message (Optional)",
+                form_submit: "Confirm Quick Booking",
+                modal_h2: "Book Your Table",
+                modal_p1: "Use this quick form to book your table. You will receive a confirmation in a few minutes.",
+                modal_p2: "For reservations of more than 8 people, please call us directly at +376 831 308.",
             }
         };
 
@@ -1786,6 +1926,31 @@
         // LÓGICA DE INTERNACIONALIZACIÓN (i18n)
         // ==============================================
         let currentLang = localStorage.getItem('lang') || 'ca';
+
+        function applyAccordionState() {
+            // Asegura que el acordeón de la primera sección esté abierto.
+            const firstAccordionToggle = document.querySelector('.first-accordion');
+            const firstAccordionBody = document.getElementById('accordion_pdf_tapas');
+
+            // 1. Resetear todos los acordeones al estado inicial (cerrado)
+            document.querySelectorAll('.accordion-body').forEach(body => {
+                body.classList.remove('open');
+                body.style.maxHeight = 0;
+            });
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.classList.remove('active');
+            });
+            
+            // 2. Abrir el primer acordeón
+            if (firstAccordionToggle && firstAccordionBody) {
+                firstAccordionToggle.classList.add('active');
+                firstAccordionBody.classList.add('open');
+                // Se necesita un pequeño delay para que el navegador calcule el scrollHeight
+                // Aunque estamos usando un valor fijo (1000px) con la clase 'open' para la transición CSS.
+                // Lo establecemos directamente aquí para la primera carga, aunque el CSS lo manejará en el toggle.
+                firstAccordionBody.style.maxHeight = '1000px'; 
+            }
+        }
 
         function setLanguage(lang) {
             currentLang = lang;
@@ -1824,11 +1989,10 @@
                 }
             });
 
-            // Re-select and re-apply active state to the default tab (now 'full_menu')
+            // Re-apply active state to the default tab ('full_menu')
             document.querySelectorAll('[data-tabs="gastronomia"] .tab').forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
             
-            // Set the new consolidated tab as active
             const defaultTabButton = document.querySelector('[data-tab-toggle="full_menu"]');
             if(defaultTabButton) {
                 defaultTabButton.classList.add('active');
@@ -1838,15 +2002,8 @@
                 }
             }
 
-            // Ensure the first accordion is open by default on language change
-            const firstAccordionHeader = document.querySelector('#accordion_pdf_tapas');
-            if (firstAccordionHeader) {
-                firstAccordionHeader.classList.add('open');
-                const firstAccordionToggle = document.querySelector('[data-accordion-toggle="accordion_pdf_tapas"]');
-                if (firstAccordionToggle) {
-                    firstAccordionToggle.classList.add('active');
-                }
-            }
+            // Aplicar el estado del acordeón después del cambio de idioma
+            applyAccordionState();
         }
 
         // Apply initial language settings
@@ -1914,16 +2071,13 @@
                 });
                 
                 // Show target panel
-                document.querySelector(`[data-tab-content="${target}"]`).classList.add('active');
-
-                // Close all accordions in the panel
-                document.querySelectorAll('.accordion-body').forEach(body => {
-                    body.classList.remove('open');
-                    body.style.maxHeight = 0;
-                });
-                document.querySelectorAll('.accordion-header').forEach(header => {
-                    header.classList.remove('active');
-                });
+                const targetPanel = document.querySelector(`[data-tab-content="${target}"]`);
+                if(targetPanel) {
+                    targetPanel.classList.add('active');
+                }
+                
+                // Aplicar el estado inicial (primer acordeón abierto) al cambiar de pestaña
+                applyAccordionState();
             });
         });
 
@@ -1933,16 +2087,21 @@
                 const targetId = header.getAttribute('data-accordion-toggle');
                 const body = document.getElementById(targetId);
 
+                if (!body) return;
+
                 // Toggle active class on header
-                header.classList.toggle('active');
+                const isActive = header.classList.contains('active');
+                header.classList.toggle('active', !isActive);
 
                 // Toggle open class on body and adjust height
-                if (body.classList.contains('open')) {
+                if (isActive) {
                     body.classList.remove('open');
                     body.style.maxHeight = 0;
                 } else {
                     body.classList.add('open');
                     // Set a height large enough to contain all content
+                    // Note: In production code, calculating scrollHeight is better, 
+                    // but using a large fixed value is sufficient with max-height transition.
                     body.style.maxHeight = '1000px'; 
                 }
             });
@@ -2000,6 +2159,8 @@
         // Set current year for footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
+        // Finalmente, aseguramos que el primer acordeón esté abierto al cargar la página.
+        applyAccordionState();
     </script>
 </body>
 </html>
