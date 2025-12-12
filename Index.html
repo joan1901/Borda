@@ -436,63 +436,51 @@
       justify-self: end;
     }
 
-    /* RE-ESTILIZACIÓN DEL PANEL DE RESERVA (HERO CARD) - Estilo Integrado y Elegante */
+    /* RE-ESTILIZACIÓN DEL PANEL DE RESERVA (HERO CARD) - REVERTIDO */
     .hero-card {
-        background: rgba(0,0,0,.45); /* Fondo oscuro transparente */
-        color: var(--crema); /* Texto claro para contraste */
-        border-radius: var(--radius-card); /* Más redondeado, como una card elegante */
-        padding: 2.2rem; /* Aumento el padding para destacar */
-        border: 1px solid rgba(196,154,90,.3); /* Borde dorado sutil */
-        box-shadow: 0 10px 40px rgba(0,0,0,.7); /* Sombra más intensa */
-        max-width: 360px;
-        backdrop-filter: blur(4px); /* Añadir efecto de desenfoque para que se integre mejor con la imagen de fondo */
+      background: rgba(11,3,4,.8); /* Vuelvo a un fondo oscuro semi-transparente */
+      border-radius: 12px;
+      padding: 1.5rem; /* Menos padding */
+      border: 1px solid rgba(196,154,90,.3); /* Borde sutil */
+      box-shadow: 0 10px 30px rgba(0,0,0,.6); /* Sombra suave */
+      max-width: 360px;
     }
 
-    /* Adaptar los colores de los elementos internos para el nuevo fondo */
+
     .hero-card h3 {
-        color: var(--daurat); /* Título dorado */
-        opacity: 1;
-        font-size: 1.5rem; /* Asegurar un buen tamaño */
-    }
-    .hero-card .hero-meta {
-        color: var(--crema);
-        opacity: .85;
+      font-size: 1.1rem;
+      margin-bottom: .6rem;
     }
 
-    /* Ajustar los campos de formulario dentro del Hero Card */
-    .hero-card .form-group label {
-        color: var(--crema);
-        opacity: .7; 
-    }
-    .hero-card .form-group input, 
-    .hero-card .form-group select {
-        background: rgba(255,255,255,.1); /* Fondo muy transparente para campos */
-        color: var(--crema); /* Texto claro para campos */
-        border: 1px solid rgba(196,154,90,.4); /* Borde dorado */
-    }
-    .hero-card .form-group input:focus, 
-    .hero-card .form-group select:focus {
-        border-color: var(--daurat); /* Mantener el foco dorado */
+    .hero-meta {
+      font-size: .83rem;
+      opacity: .85;
+      margin-bottom: 1rem;
     }
 
-
-    /* Ajustar el badge (Abierto Hoy) */
-    .hero-card .hero-badge {
-        background: var(--daurat); /* Fondo dorado */
-        color: var(--vi-fosc); /* Texto oscuro */
-        border-radius: 6px;
-        padding: .2rem .6rem;
-        font-size: .7rem;
-        display: inline-flex;
-        align-items: center;
-        gap: .4rem;
-        margin-bottom: 1rem;
+    .hero-meta span {
+      display: block;
     }
-    .hero-card .hero-badge-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: var(--vi-fosc); /* Punto oscuro */
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      padding: .25rem .75rem;
+      border-radius: 999px;
+      background: rgba(164,86,58,.22);
+      font-size: .7rem;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: .8rem;
+    }
+
+    .hero-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #51d38a;
     }
 
     .hero-scroll {
@@ -835,28 +823,16 @@
     .celler-info h3 {
       font-size: 1.4rem;
       margin-bottom: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .12em;
     }
 
-    .celler-photo img {
+    .celler-photo {
       border-radius: 22px;
-      width: 100%;
-      height: 100%;
+      overflow: hidden;
+      aspect-ratio: 4/3;
       object-fit: cover;
-      min-height: 400px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.6);
-    }
-    
-    .celler-videos {
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0,0,0,.6);
-    }
-    .celler-videos video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      min-height: 200px;
-      display: block;
     }
 
     @media (max-width: 900px) {
@@ -866,78 +842,98 @@
       }
     }
 
-    /* CONTACTE (ELIMINADO FORMULARIO INFERIOR) */
+    /* CONTACTE */
 
-    .contact-layout-new {
+    .contact-grid {
       display: grid;
-      grid-template-columns: 1fr; /* Default: stack on mobile */
-      gap: 3rem;
-      align-items: start;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
     }
 
-    @media (min-width: 901px) {
-        .contact-layout-new {
-            grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); /* Two columns on desktop */
-        }
+    .contact-card {
+      background: rgba(0,0,0,.35);
+      border-radius: 12px;
+      padding: 2rem;
+      border: 1px solid rgba(196,154,90,.3);
     }
 
-    .contact-info {
-      /* Ajustamos el padding ya que la columna contigua ya no es un formulario rápido */
-      padding-right: 0; 
-    }
-
-    .contact-info h3 {
-      font-size: 1.2rem;
-      color: var(--daurat);
+    .contact-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 1.1rem;
       margin-bottom: .8rem;
     }
 
-    .contact-detail {
-      margin-bottom: 1.5rem;
-      font-size: .95rem;
+    .contact-info {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0 0;
+    }
+
+    .contact-info li {
+      margin-bottom: .8rem;
+    }
+
+    .contact-info a {
+      opacity: .85;
       display: flex;
       align-items: center;
-      gap: 1rem;
-      opacity: .85;
+      gap: .7rem;
+      transition: opacity .2s ease;
     }
 
-    .contact-detail i {
-      color: var(--daurat);
-      font-size: 1.1rem;
-    }
-
-    .map-container {
-      position: relative;
-      height: 300px;
-      width: 100%;
-      background: #111;
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,.6);
-    }
-
-    .map-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .contact-schedule p {
-      margin-bottom: .5rem;
-      font-size: .9rem;
+    .contact-info a:hover {
       opacity: 1;
+      color: var(--daurat);
     }
 
-    /* BOTONES SOCIALES FLOTANTES (MODIFICADO) */
-    .social-float { 
-        position: fixed; 
-        bottom: 1.5rem; 
-        right: 1.5rem; 
-        z-index: 60; 
-        display: flex; 
-        flex-direction: column; 
-        gap: .7rem; 
-    } 
+    .contact-info .fa {
+      color: var(--daurat);
+      width: 20px;
+    }
+    
+    .contact-map {
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid rgba(196,154,90,.3);
+        height: 100%;
+        min-height: 300px; /* Asegurar altura mínima en móvil */
+    }
+
+    .contact-map iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    
+    .schedule-list {
+        list-style: none;
+        padding: 0;
+        margin: .8rem 0 0;
+    }
+    .schedule-list li {
+        opacity: .8;
+        margin-bottom: .3rem;
+    }
+    .schedule-list strong {
+        font-weight: 600;
+        color: var(--daurat);
+    }
+
+
+    /* SOCIAL BUTTONS FLOTANTES */
+    .social-float {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 60;
+        display: flex;
+        flex-direction: column;
+        gap: .7rem;
+    }
+
     .sf-btn {
         width: 48px; /* MODIFICADO: Ligeramente más grande */
         height: 48px;
@@ -962,7 +958,6 @@
     }
 
     /* FOOTER */
-
     .site-footer {
         padding: 3rem 0 1rem;
         background: #0A0405;
@@ -970,7 +965,6 @@
         font-size: .85rem;
         text-align: center;
     }
-
     .footer-links {
         display: flex;
         justify-content: center;
@@ -981,11 +975,9 @@
         letter-spacing: .1em;
         font-size: .75rem;
     }
-
     .footer-links a:hover {
         color: var(--daurat);
     }
-
     .footer-copy {
         opacity: .6;
     }
@@ -1004,15 +996,24 @@
         display: block;
     }
 
-    .modal-reserva-inner {
+    .modal-content {
         max-width: 480px;
-        margin: 5rem auto;
-        background: var(--vi-fosc);
-        border-radius: var(--radius-card);
+        margin: 6rem auto 3rem;
         padding: 2rem;
-        border: 1px solid rgba(196,154,90,.35);
-        box-shadow: var(--shadow-soft);
+        background: #12090A;
+        border-radius: 12px;
         position: relative;
+        box-shadow: 0 15px 40px rgba(0,0,0,.9);
+        border: 1px solid rgba(196,154,90,.3);
+    }
+
+    .modal-header {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.8rem;
     }
 
     .modal-close {
@@ -1022,42 +1023,38 @@
         background: none;
         border: none;
         color: var(--crema);
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         cursor: pointer;
         opacity: .6;
-        transition: opacity .2s ease;
     }
     .modal-close:hover {
         opacity: 1;
         color: var(--daurat);
     }
 
-    .modal-reserva-inner h2 {
-        font-size: 1.8rem;
-        color: var(--daurat);
-        margin-bottom: 1.5rem;
-        text-align: center;
-    }
-
-    .modal-reserva-inner p {
-        text-align: center;
-        margin-bottom: 2rem;
-        opacity: .85;
-    }
-
-    .modal-form-full {
-        width: 100%;
-        margin-top: 1.5rem;
+    @media (max-width: 600px) {
+        .modal-content {
+            margin: 3rem 1rem;
+            padding: 1.5rem;
+        }
+        .social-float {
+            right: 1rem;
+            bottom: 1rem;
+        }
     }
     
+    /* Utility class for hiding scroll */
     .no-scroll {
         overflow: hidden;
     }
-
-    /* ANIMACIÓN */
+    
+    /* Animation styles */
     .initial-hidden {
         opacity: 0;
         transform: translateY(20px);
+    }
+
+    .reveal {
         transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
 
@@ -1066,407 +1063,398 @@
         transform: translateY(0);
     }
 
-    .reveal-delay-1.visible {
-        transition-delay: 0.1s;
-    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
 
-    .reveal-delay-2.visible {
-        transition-delay: 0.2s;
-    }
 
-    .reveal-delay-3.visible {
-        transition-delay: 0.3s;
-    }
   </style>
+
 </head>
-<body>
+<body data-lang="ca">
 
-<div class="page">
+  <div class="page">
+    
+    <header class="site-header transparent">
+      <div class="site-header-inner">
+        <a href="#home" class="logo">Borda Vella <span><span data-i18n="title_subtitle">Encamp · Andorra</span></span></a>
 
-    <header class="site-header transparent" id="header">
-        <div class="site-header-inner">
-            <a href="#" class="logo" data-i18n="title_subtitle_group">
-                Borda Vella
-                <span data-i18n="title_subtitle">Encamp · Andorra</span>
-            </a>
-            <nav class="nav">
-                <a href="#historia" data-i18n="nav_history">Història</a>
-                <a href="#gastronomia" data-i18n="nav_gastronomy">Gastronomia</a>
-                <a href="#celler" data-i18n="nav_cellar">Celler</a>
-                <a href="#contacte" data-i18n="nav_contact">Contacte</a>
-                <button class="nav-cta" data-open-reserva data-i18n="nav_book_desktop">Reservar Taula</button>
-                <div class="lang-switch">
-                    <button data-lang="ca" class="active">CA</button>
-                    |
-                    <button data-lang="es">ES</button>
-                    |
-                    <button data-lang="en">EN</button>
-                    |
-                    <button data-lang="fr">FR</button>
-                </div>
-            </nav>
-            <button class="hamburger" data-open-mobile-menu>
-                <i class="fa fa-bars"></i>
-            </button>
-        </div>
+        <nav class="nav">
+          <a href="#historia" data-i18n="nav_history">Història</a>
+          <a href="#gastronomia" data-i18n="nav_gastronomy">Gastronomia</a>
+          <a href="#celler" data-i18n="nav_cellar">Celler</a>
+          <a href="#contacte" data-i18n="nav_contact">Contacte</a>
+          <button class="nav-cta" data-open-reserva data-i18n="nav_book_desktop">Reservar Taula</button>
+          <div class="lang-switch">
+            <button data-lang="ca" class="active">CA</button> |
+            <button data-lang="es">ES</button> |
+            <button data-lang="en">EN</button> |
+            <button data-lang="fr">FR</button>
+          </div>
+        </nav>
+
+        <button class="hamburger" data-open-mobile-menu>
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
     </header>
 
     <div class="mobile-menu" data-mobile-menu>
-        <div class="site-header-inner">
-            <a href="#" class="logo" data-i18n="title_subtitle_group">
-                Borda Vella
-                <span data-i18n="title_subtitle">Encamp · Andorra</span>
-            </a>
-            <button class="hamburger" data-close-mobile-menu>
-                <i class="fa fa-times"></i>
-            </button>
+      <div class="mobile-menu-inner">
+        <button class="hamburger" data-close-mobile-menu style="align-self: flex-end;">
+          <i class="fa fa-times"></i>
+        </button>
+
+        <a href="#historia" data-i18n="nav_history" data-close-mobile-menu>Història</a>
+        <a href="#gastronomia" data-i18n="nav_gastronomy" data-close-mobile-menu>Gastronomia</a>
+        <a href="#celler" data-i18n="nav_cellar" data-close-mobile-menu>Celler</a>
+        <a href="#contacte" data-i18n="nav_contact" data-close-mobile-menu>Contacte</a>
+        <button class="nav-cta" data-open-reserva data-i18n="nav_book_desktop" data-close-mobile-menu>Reservar Taula</button>
+        <div class="lang-switch">
+          <button data-lang="ca" class="active">CA</button> |
+          <button data-lang="es">ES</button> |
+          <button data-lang="en">EN</button> |
+          <button data-lang="fr">FR</button>
         </div>
-        <div class="mobile-menu-inner">
-            <a href="#historia" data-i18n="nav_history" data-close-mobile-menu>Història</a>
-            <a href="#gastronomia" data-i18n="nav_gastronomy" data-close-mobile-menu>Gastronomia</a>
-            <a href="#celler" data-i18n="nav_cellar" data-close-mobile-menu>Celler</a>
-            <a href="#contacte" data-i18n="nav_contact" data-close-mobile-menu>Contacte</a>
-            <button class="nav-cta" data-open-reserva data-i18n="nav_book_desktop" data-close-mobile-menu>Reservar Taula</button>
-            <div class="lang-switch">
-                <button data-lang="ca" class="active">CA</button>
-                |
-                <button data-lang="es">ES</button>
-                |
-                <button data-lang="en">EN</button>
-                |
-                <button data-lang="fr">FR</button>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <section class="hero" id="home">
-        <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-inner container">
-            <div class="hero-content reveal">
-                <span class="hero-kicker" data-i18n="hero_kicker">Des de 1972</span>
-                <h1 data-i18n="hero_h1">L'autèntica gastronomia de muntanya d'Andorra.</h1>
-                <p data-i18n="hero_p1">El punt de trobada ideal a Encamp. Cuina de brasa, producte de proximitat i una carta de vins que et sorprendrà.</p>
 
-                <div class="hero-cta-group">
-                    <button class="btn-primary" data-open-reserva data-i18n="hero_book_cta">Reserva Ara</button>
-                    <a href="#gastronomia" class="btn-ghost" data-i18n="hero_menu_cta">Veure la Carta</a>
-                </div>
-                <p class="hero-phone" data-i18n="hero_phone">O truca'ns: <a href="tel:+376831308" data-i18n="hero_phone_number">+376 831 308</a></p>
-            </div>
-            
-            <div class="hero-aside reveal reveal-delay-2">
-                <div class="hero-card">
-                    <span class="hero-badge" data-i18n="hero_card_badge_group">
-                        <span class="hero-badge-dot"></span>
-                        <span data-i18n="hero_card_badge">Obert Avui</span>
-                    </span>
-                    <h3 data-i18n="hero_card_h3">Reserva Ràpida</h3>
-                    <p class="hero-meta" data-i18n="hero_card_p1">Per a reserves de menys de 8 persones. Per a grups, truca'ns.</p>
-                    <form class="hero-form" data-reserva-form>
-                        <div class="form-cols-2">
-                            <div class="form-group">
-                                <label for="form-date" data-i18n="form_date">Fecha</label>
-                                <input type="date" id="form-date" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="form-time" data-i18n="form_time">Hora</label>
-                                <input type="time" id="form-time" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="form-people" data-i18n="form_people">Comensals</label>
-                            <select id="form-people" required>
-                                <option value="1">1 persona</option>
-                                <option value="2">2 persones</option>
-                                <option value="3">3 persones</option>
-                                <option value="4" selected>4 persones</option>
-                                <option value="5">5 persones</option>
-                                <option value="6">6 persones</option>
-                                <option value="7">7 persones</option>
-                                <option value="8">8 persones</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn-primary form-full" data-i18n="form_submit">Confirmar la Reserva</button>
-                    </form>
-                </div>
-            </div>
+    <section class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-inner container">
+        <div class="hero-content reveal">
+          <span class="hero-kicker" data-i18n="hero_kicker">Des de 1972</span>
+          <h1 data-i18n="hero_h1">L'autèntica gastronomia de muntanya d'Andorra.</h1>
+          <p data-i18n="hero_p1">El punt de trobada ideal a Encamp. Cuina de brasa, producte de proximitat i una carta de vins que et sorprendrà.</p>
+          <div class="hero-cta-group">
+            <button class="btn-primary" data-open-reserva data-i18n="hero_book_cta">Reserva Ara</button>
+            <a href="#gastronomia" class="btn-ghost" data-i18n="hero_menu_cta">Veure la Carta</a>
+          </div>
+          <p class="hero-phone" data-i18n="hero_phone">O truca'ns: <a href="tel:+376831308" data-i18n="hero_phone_number">+376 831 308</a></p>
         </div>
 
-        <a href="#historia" class="hero-scroll">
-            <i class="fa fa-angle-down" style="animation: bounce .6s alternate infinite;"></i>
+        <div class="hero-aside reveal reveal-delay-2">
+          <div class="hero-card">
+            <span class="hero-badge" data-i18n="hero_card_badge_group">
+              <span class="hero-badge-dot"></span> <span data-i18n="hero_card_badge_text">Obert</span>
+            </span>
+            <h3 data-i18n="hero_card_h3">Reserva Ràpida</h3>
+            <p class="hero-meta" data-i18n="hero_card_p1">Per a reserves de menys de 8 persones. Per a grups, truqueu-nos directament.</p>
+
+            <form action="#" method="POST" id="quick-reserva-form">
+              <div class="form-cols-2">
+                <div class="form-group">
+                  <label for="qr-date" data-i18n="form_date">Data</label>
+                  <input type="date" id="qr-date" name="date" required value="2025-12-12">
+                </div>
+                <div class="form-group">
+                  <label for="qr-time" data-i18n="form_time">Hora</label>
+                  <input type="time" id="qr-time" name="time" required value="20:30">
+                </div>
+                <div class="form-group form-full">
+                  <label for="qr-people" data-i18n="form_people">Convidats</label>
+                  <select id="qr-people" name="people" required>
+                    <option value="2">2 persones</option>
+                    <option value="4">4 persones</option>
+                    <option value="6">6 persones</option>
+                    <option value="8">8 persones</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn-primary form-full" data-i18n="form_submit">Confirmar la Reserva</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+        <a href="#historia" class="hero-scroll reveal reveal-delay-3" data-i18n="hero_scroll">
             <span data-i18n="hero_scroll">Desplaçar</span>
+            <i class="fa fa-chevron-down animated-bounce"></i>
         </a>
+      </div>
     </section>
 
     <section class="section section-light" id="historia">
-        <div class="container grid-2">
-            <div class="history-content reveal">
-                <div class="section-header">
-                    <p class="eyebrow" data-i18n="history_eyebrow">El Nostre Llinatge</p>
-                    <h2 data-i18n="history_h2">Cuina de Borda, Visió de Xef.</h2>
-                </div>
-                <p data-i18n="history_p1">Borda Vella va obrir les seves portes el 1972, convertint-se en un dels restaurants més emblemàtics d'Encamp i Andorra. La seva història és la de les 'bordes' andorranes, on la <strong>tradició</strong>, el <strong>producte del territori</strong> i l'<strong>hospitalitat</strong> són els pilars fonamentals. Al llarg dels anys, el nostre Xef, Manel Morgade, ha perfeccionat el seu art en cuines d'1 Estrella Michelin i hotels 5 estrelles. Ha agafat aquest projecte amb una filosofia clara: <strong>viure per menjar i cuinar per compartir</strong> el sabor autèntic. El <strong>foc</strong> és el cor de la seva cuina, i la nostra brasa l'escenari on transforma la matèria primera, honrant el producte amb l'honestedat de les brasas. Aquí es fusionen dos llegats: la <strong>tradició inquebrantable de la muntanya</strong> i la <strong>visió sense complexos d'un Xef</strong> que ha dedicat la seva vida a la gastronomia. Borda Vella és la promesa del nostre Xef d'oferir una experiència autèntica on el sabor de la tradició i l'audàcia culinària es troben a la seva taula.</p>
-
-                <div class="history-pills">
-                    <div class="history-pill">
-                        <strong data-i18n="history_pill_1_title">Cuina de Brasa</strong>
-                        <span data-i18n="history_pill_1_text">El foc com a tècnica culinària.</span>
-                    </div>
-                    <div class="history-pill">
-                        <strong data-i18n="history_pill_2_title">Producte d'Autor</strong>
-                        <span data-i18n="history_pill_2_text">Visió i tècnica de Xef Michelin.</span>
-                    </div>
-                    <div class="history-pill">
-                        <strong data-i18n="history_pill_3_title">Borda Tradicional</strong>
-                        <span data-i18n="history_pill_3_text">L'encant rústic d'Encamp.</span>
-                    </div>
-                </div>
+      <div class="container grid-2">
+        <div class="history-content reveal">
+          <div class="section-header">
+            <p class="eyebrow" data-i18n="history_eyebrow">La Nostra Història</p>
+            <h2 data-i18n="history_h2">L'essència de la cuina de muntanya, amb una nova visió.</h2>
+          </div>
+          <p data-i18n="history_p1">Borda Vella va obrir les seves portes el 1972, convertint-se en un dels restaurants més emblemàtics d'Encamp i Andorra. La seva història és la de les 'bordes' andorranes, on la <strong>tradició</strong>, el <strong>producte del territori</strong> i l'<strong>hospitalitat</strong> són els pilars fonamentals. Al llarg dels anys, el nostre Xef, Manel Morgade, ha perfeccionat el seu art en cuines d'1 Estrella Michelin i hotels 5 estrelles. Ha agafat aquest projecte amb una filosofia clara: <strong>viure per menjar i cuinar per compartir</strong> el sabor autèntic. El <strong>foc</strong> és el cor de la seva cuina, i la nostra brasa l'escenari on transforma la matèria primera, honrant el producte amb l'honestedat de les brasas. Aquí es fusionen dos llegats: la <strong>tradició inquebrantable de la muntanya</strong> i la <strong>visió sense complexos d'un Xef</strong> que ha dedicat la seva vida a la gastronomia. Borda Vella és la promesa del nostre Xef d'oferir una experiència autèntica on el sabor de la tradició i l'audàcia culinària es troben a la seva taula.</p>
+          <div class="history-pills">
+            <div class="history-pill">
+              <strong data-i18n="history_pill_1_title">Cuina de Brasa</strong>
+              <span data-i18n="history_pill_1_text">El foc com a tècnica culinària.</span>
             </div>
-            <div class="photo-mosaic reveal reveal-delay-2">
-                <img src="borda_vella_1.jpg" alt="Interior de la Borda Vella" class="photo-main">
-                <img src="borda_vella_2.jpg" alt="Plat de carn a la brasa" class="photo-secondary">
-                <img src="borda_vella_3.jpg" alt="Plat de cuina" class="photo-secondary">
+            <div class="history-pill">
+              <strong data-i18n="history_pill_2_title">Producte d'Autor</strong>
+              <span data-i18n="history_pill_2_text">Visió i tècnica de Xef Michelin.</span>
             </div>
+            <div class="history-pill">
+              <strong data-i18n="history_pill_3_title">Borda Tradicional</strong>
+              <span data-i18n="history_pill_3_text">L'encant rústic d'Encamp.</span>
+            </div>
+          </div>
         </div>
+        <div class="photo-mosaic reveal reveal-delay-2">
+          <img src="borda_vella_1.jpg" alt="Interior de la Borda Vella" class="photo-main">
+          <img src="borda_vella_2.jpg" alt="Plat de carn a la brasa" class="photo-secondary">
+          <img src="borda_vella_3.jpg" alt="Plat de cuina" class="photo-secondary">
+        </div>
+      </div>
     </section>
 
     <section class="section" id="experiencies">
-        <div class="container">
-            <div class="section-header reveal reveal-delay-1">
-                <p class="eyebrow" data-i18n="experiences_eyebrow">Moment BV</p>
-                <h2 data-i18n="experiences_h2">Una experiència única, més enllà del menjar.</h2>
-                <p data-i18n="experiences_p1">Disposem de diferents espais i salons privats per a grups i celebracions especials. Ja sigui una reunió familiar, un esdeveniment d'empresa o una vetllada íntima, farem de la teva experiència un record inoblidable.</p>
-
-                <div class="hero-cta-group">
-                    <button class="btn-primary" data-open-reserva data-i18n="experiences_cta">Reserva la teva Experiència</button>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header reveal reveal-delay-1">
+          <p class="eyebrow" data-i18n="experiences_eyebrow">Moment BV</p>
+          <h2 data-i18n="experiences_h2">Una experiència única, més enllà del menjar.</h2>
+          <p data-i18n="experiences_p1">Disposem de diferents espais i salons privats per a grups i celebracions especials. Ja sigui una reunió familiar, un esdeveniment d'empresa o una vetllada íntima, farem de la teva experiència un record inoblidable.</p>
+          <div class="hero-cta-group">
+            <button class="btn-primary" data-open-reserva data-i18n="experiences_cta">Reserva la teva Experiència</button>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="section section-dark" id="gastronomia">
-        <div class="container">
-            <div class="section-header reveal">
-                <p class="eyebrow" data-i18n="gastronomy_eyebrow">Nostra Carta</p>
-                <h2 data-i18n="gastronomy_h2">La millor cuina de muntanya, reinventada.</h2>
-                <p data-i18n="gastronomy_p1">Des dels clàssics a la brasa i arrossos de muntanya, fins als plats de temporada amb un toc d'avantguarda.</p>
-            </div>
-            
-            <div class="horizontal-menu-layout">
-                <div class="menu-section-column reveal reveal-delay-1" data-menu-accordion>
-                    <div class="accordion-header">
-                        <h3 data-i18n="menu_section_1_title">Un tastet per picar i gaudir</h3>
-                        <button class="toggle-button" data-toggle-accordion>
-                            <span class="button-text" data-i18n="toggle_open">Mostrar Plats</span>
-                            <i class="fa fa-chevron-down toggle-icon"></i>
-                        </button>
-                    </div>
-                    <div class="accordion-body">
-                        <ul class="dish-list">
-                            <li>
-                                <h3 data-i18n="dish_1_name">EL FOIE QUE ACARONA EL PALADAR <span>22,50 €</span></h3>
-                                <p data-i18n="dish_1_desc">Fet pel Xef Manel.</p>
-                            </li>
-                            <li>
-                                <h3 data-i18n="dish_2_name">CARPACCIO DE FILET DE VACA VELLA <span>19,50 €</span></h3>
-                                <p data-i18n="dish_2_desc">amb foie, oli de Tòfona, BRUTAL!!!</p>
-                            </li>
-                            <li>
-                                <h3 data-i18n="dish_3_name">CARPACCIO D'ENTRECOT DE VEDELLA GALLEGA <span>26,00 €</span></h3>
-                                <p data-i18n="dish_3_desc">D'Albert Adrià (sí, aquest!!!), intens i saborós.</p>
-                            </li>
-                            <li>
-                                <h3 data-i18n="dish_4_name">CARPACCIO DE GAMBA <span>22,00 €</span></h3>
-                                <p data-i18n="dish_4_desc">amb un gelat que et porta directe a la costa.</p>
-                            </li>
-                            <li>
-                                <h3 data-i18n="dish_5_name">LA NOSTRA CAPRESE <span>19,50 €</span></h3>
-                                <p data-i18n="dish_5_desc">Burrata Italiana, gelats d'albàbrega i tomàquet, pesto, oliva Kalamata... tot ben lligat, amb cullereta.</p>
-                            </li>
-                            <li>
-                                <h3 data-i18n="dish_6_name">ANCHOES DE SANTOÑA (de les Bones) <span>15,50 €</span></h3>
-                                <p data-i18n="dish_6_desc">Don Bocarte, 6 filets per compartir, o no...</p>
-                            </li>
-                            <li>
-                                <h3 data-i18n="dish_7_name">GILDA GILDA GILDA <span>15,50 €</span></h3>
-                                <p data-i18n="dish_7_desc">Petites, salades i amb molt de nervi.</p>
-                            </li>
-                            <li>
-                                <h3 data-i18n="dish_8_name">PA DE COCA DE FOLGUEROLES <span>3,50 €</span></h3>
-                                <p data-i18n="dish_8_desc">Amb tomàquet, oli i sal. No cal complicar-ho. Suplement pa 1,75€. Pa sense gluten 3,50€.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="menu-section-column reveal reveal-delay-2" data-menu-accordion>
-                    <div class="accordion-header">
-                        <h3 data-i18n="menu_section_2_title">L'art de coure bé</h3>
-                        <button class="toggle-button" data-toggle-accordion>
-                            <span class="button-text" data-i18n="toggle_open">Mostrar Plats</span>
-                            <i class="fa fa-chevron-down toggle-icon"></i>
-                        </button>
-                    </div>
-                    <div class="accordion-body">
-                        <ul class="dish-list">
-                            <li>
-                                <h3 data-i18n="dish_art_1_name">GYOZAS CRUIXENTS <span>16,00 €</span></h3>
-                                <p data-i18n="dish_art_1_desc">De Carrillera i mel, banyades en salsa de curri i formatge scarmoza.</p>
-                            </li>
-                            <li>
-                                <h3 data-i18n="dish_art_2_name">LLAMÀNTOL SENSE FEINA <span>40,50 €</span></h3>
-                                <p data-i18n="dish_art_2_desc">Amb ou BIO i patates de l'àvia.</p>
-                            </li>
-                            <li>
-                                <h3 data-i18n="dish_art_3_name">CARXOFES CONFITADES <span>16,00 €</span></h3>
-                                <p data-i18n="dish_art_3_desc">Amb pasta de tòfona negra i foie.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="menu-section-column reveal reveal-delay-3" data-menu-accordion>
-                    <div class="accordion-header">
-                        <h3 data-i18n="menu_section_3_title">Els Plats Forts</h3>
-                        <button class="toggle-button" data-toggle-accordion>
-                            <span class="button-text" data-i18n="toggle_open">Mostrar Plats</span>
-                            <i class="fa fa-chevron-down toggle-icon"></i>
-                        </button>
-                    </div>
-                    <div class="accordion-body">
-                        <ul class="dish-list">
-                            <li>
-                                <h3 data-i18n="dish_strong_1_name">GALTA DE VEDELLA QUE ES DESFÀ SOLA <span>22,90 €</span></h3>
-                                <p data-i18n="dish_strong_1_desc">Amb un toc de cacau i parmentier.</p>
-                            </li>
-                            <li>
-                                <h3 data-i18n="dish_strong_2_name">FILET DE VACA VELLA CORONADA <span>32,20 €</span></h3>
-                                <p data-i18n="dish_strong_2_desc">Banyat amb salsa de Ceps, amb patates de forner.</p>
-                            </li>
-                            <li>
-                                <h3 data-i18n="dish_strong_3_name">ARRÒS CALDÓS DE TRUITA <span>24,50 €</span></h3>
-                                <p data-i18n="dish_strong_3_desc">Amb pollastre de pagès, i bolets de temporada (mínim 2 persones).</p>
-                            </li>
-                            <li>
-                                <h3 data-i18n="dish_strong_4_name">BACALLÀ AL PIL PIL AMB OLI DE XORIÇ <span>28,50 €</span></h3>
-                                <p data-i18n="dish_strong_4_desc">Amb ceba confitada i una espuma de patata.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="menu-section-column reveal reveal-delay-4" data-menu-accordion>
-                    <div class="accordion-header">
-                        <h3 data-i18n="menu_section_4_title">L'ÚLTIM MOS</h3>
-                        <button class="toggle-button" data-toggle-accordion>
-                            <span class="button-text" data-i18n="toggle_open">Mostrar Plats</span>
-                            <i class="fa fa-chevron-down toggle-icon"></i>
-                        </button>
-                    </div>
-                    <div class="accordion-body">
-                        <ul class="dish-list">
-                            <li>
-                                <h3 data-i18n="dish_dessert_1_name">MATÓ DEL PASTOR AMB MEL I NOUS <span>6,75 €</span></h3>
-                                <p data-i18n="dish_dessert_1_desc">El clàssic que mai falla.</p>
-                            </li>
-                            <li>
-                                <h3 data-i18n="dish_dessert_2_name">TATÍN DE POMA <span>7,25 €</span></h3>
-                                <p data-i18n="dish_dessert_2_desc">Amb el seu gelat d'Armanyac i prunes macerades.</p>
-                            </li>
-                            <li>
-                                <h3 data-i18n="dish_dessert_3_name">EL COULANT <span>8,75 €</span></h3>
-                                <p data-i18n="dish_dessert_3_desc">Coulant pecat mortal de xocolata mig cuita amb oli d'oliva i una mica de sal.</p>
-                            </li>
-                            <li>
-                                <h3 data-i18n="dish_dessert_4_name">SORBETS DE LA CASA <span>5,75 €</span></h3>
-                                <p data-i18n="dish_dessert_4_desc">De Gintonic i Lima, gerdssilvestres, Festuc Esmeralda, i Mango.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow" data-i18n="gastronomy_eyebrow">Nostra Carta</p>
+          <h2 data-i18n="gastronomy_h2">La millor cuina de muntanya, reinventada.</h2>
+          <p data-i18n="gastronomy_p1">Des dels clàssics a la brasa i arrossos de muntanya, fins als plats de temporada amb un toc d'avantguarda.</p>
         </div>
+
+        <div class="horizontal-menu-layout">
+          
+          <div class="menu-section-column reveal reveal-delay-1" data-menu-accordion>
+            <div class="accordion-header">
+              <h3 data-i18n="menu_section_1_title">Un tastet per picar i gaudir</h3>
+              <button class="toggle-button" data-toggle-accordion>
+                <span class="button-text" data-i18n="toggle_open">Mostrar Plats</span>
+                <i class="fa fa-chevron-down toggle-icon"></i>
+              </button>
+            </div>
+            <div class="accordion-body">
+              <ul class="dish-list">
+                <li>
+                  <h3 data-i18n="dish_1_name">EL FOIE QUE ACARONA EL PALADAR <span>22,50 €</span></h3>
+                  <p data-i18n="dish_1_desc">Fet pel Xef Manel.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_2_name">CARPACCIO DE FILET DE VACA VELLA <span>19,50 €</span></h3>
+                  <p data-i18n="dish_2_desc">amb foie, oli de Tòfona, BRUTAL!!!</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_3_name">CARPACCIO D'ENTRECOT DE VEDELLA GALLEGA <span>26,00 €</span></h3>
+                  <p data-i18n="dish_3_desc">D'Albert Adrià (sí, aquest!!!), intens i saborós.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_4_name">CARPACCIO DE GAMBA <span>22,00 €</span></h3>
+                  <p data-i18n="dish_4_desc">Amb oli d'alfàbrega i fruita de la passió al costat.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_5_name">LA NOSTRA CAPRESE <span>19,50 €</span></h3>
+                  <p data-i18n="dish_5_desc">Burrata Italiana, gelats d'alfàbrega i de tomàquet, pesto, oliva Kalamata... tot ben lligat, amb cullereta.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_6_name">ANCHOVES DE SANTOÑA (de les Bones) <span>15,50 €</span></h3>
+                  <p data-i18n="dish_6_desc">Don Bocarte, 6 filets per compartir, o no...</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_7_name">GILDA GILDA GILDA <span>15,50 €</span></h3>
+                  <p data-i18n="dish_7_desc">Petites, salades i amb molt de nervi.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_8_name">PA DE COCA DE FOLGUEROLES <span>3,50 €</span></h3>
+                  <p data-i18n="dish_8_desc">Amb tomàquet, oli i sal. No cal complicar-ho. Suplement pa 1,75€. Pa sense gluten 3,50€.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="menu-section-column reveal reveal-delay-2" data-menu-accordion>
+            <div class="accordion-header">
+              <h3 data-i18n="menu_section_2_title">L'art de coure bé</h3>
+              <button class="toggle-button" data-toggle-accordion>
+                <span class="button-text" data-i18n="toggle_open">Mostrar Plats</span>
+                <i class="fa fa-chevron-down toggle-icon"></i>
+              </button>
+            </div>
+            <div class="accordion-body">
+              <ul class="dish-list">
+                <li>
+                  <h3 data-i18n="dish_art_1_name">GYOZAS CRUIXENTS <span>16,00 €</span></h3>
+                  <p data-i18n="dish_art_1_desc">De Carrillera i mel, banyades en salsa de curri i formatge scarmoza.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_art_2_name">LLAMÀNTOL SENSE FEINA <span>40,50 €</span></h3>
+                  <p data-i18n="dish_art_2_desc">Amb ou BIO i patates de l'àvia.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_art_3_name">OUS FERRATS AMB SOBRASSADA <span>18,50 €</span></h3>
+                  <p data-i18n="dish_art_3_desc">Amb patates, oli de tòfona, i un toc de picant.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_art_4_name">CANELÓ TRADICIONAL <span>16,75 €</span></h3>
+                  <p data-i18n="dish_art_4_desc">De carn de rostir, amb beixamel de ceps i formatge de cabra.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_art_5_name">ARRÒS DE MUNTANYA AMB LLOBREGANT <span>35,00 €</span></h3>
+                  <p data-i18n="dish_art_5_desc">Melós, de ceps i llamàntol. Mínim 2 persones. Preu per persona.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_art_6_name">ARRÒS AMB BOTIFARRA DEL PAÍS <span>24,00 €</span></h3>
+                  <p data-i18n="dish_art_6_desc">Amb all negre i ceps. Mínim 2 persones. Preu per persona.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="menu-section-column reveal reveal-delay-3" data-menu-accordion>
+            <div class="accordion-header">
+              <h3 data-i18n="menu_section_3_title">Els Plats Forts</h3>
+              <button class="toggle-button" data-toggle-accordion>
+                <span class="button-text" data-i18n="toggle_open">Mostrar Plats</span>
+                <i class="fa fa-chevron-down toggle-icon"></i>
+              </button>
+            </div>
+            <div class="accordion-body">
+              <ul class="dish-list">
+                <li>
+                  <h3 data-i18n="dish_main_1_name">COSTELLES DE VEDELLA A LA BRASA <span>28,50 €</span></h3>
+                  <p data-i18n="dish_main_1_desc">Servides amb patates a lo pobre.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_main_2_name">ENTRECOT DE VACA Vella <span>29,50 €</span></h3>
+                  <p data-i18n="dish_main_2_desc">A la brasa, amb flor de sal, servit amb patates de guarnició.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_main_3_name">SOLOMILLO DE VACA A LA BRASA <span>34,50 €</span></h3>
+                  <p data-i18n="dish_main_3_desc">Amb salsa de ceps i foie.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_main_4_name">Pota de Pop a la Brasa <span>29,00 €</span></h3>
+                  <p data-i18n="dish_main_4_desc">Amb puré de patates trufat i pebre vermell de la Vera.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_main_5_name">LLOM DE BACALLÀ CONFITAT <span>28,50 €</span></h3>
+                  <p data-i18n="dish_main_5_desc">Amb espinacs i all negre.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="menu-section-column reveal reveal-delay-4" data-menu-accordion>
+            <div class="accordion-header">
+              <h3 data-i18n="menu_section_4_title">L'ÚLTIM MOS</h3>
+              <button class="toggle-button" data-toggle-accordion>
+                <span class="button-text" data-i18n="toggle_open">Mostrar Plats</span>
+                <i class="fa fa-chevron-down toggle-icon"></i>
+              </button>
+            </div>
+            <div class="accordion-body">
+              <ul class="dish-list">
+                <li>
+                  <h3 data-i18n="dish_dessert_1_name">CREMA CATALANA <span>7,00 €</span></h3>
+                  <p data-i18n="dish_dessert_1_desc">La clàssica, amb el seu toc de canyella i llimona.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_dessert_2_name">TATÍN DE POMA <span>7,25 €</span></h3>
+                  <p data-i18n="dish_dessert_2_desc">Amb el seu gelat d'Armanyac i prunes macerades.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_dessert_3_name">EL COULANT <span>8,75 €</span></h3>
+                  <p data-i18n="dish_dessert_3_desc">Coulant pecat mortal de xocolata mig cuita amb oli d'oliva i una mica de sal.</p>
+                </li>
+                <li>
+                  <h3 data-i18n="dish_dessert_4_name">SORBETS DE LA CASA <span>5,75 €</span></h3>
+                  <p data-i18n="dish_dessert_4_desc">De Gintonic i Lima, gerdssilvestres, Festuc Esmeralda, i Mango.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="section section-dark" id="celler">
-        <div class="container celler-layout">
-            <div class="celler-info reveal">
-                <div class="section-header">
-                    <p class="eyebrow" data-i18n="cellar_eyebrow">El Nostre Celler</p>
-                    <h2 data-i18n="cellar_h2">Una cava d'altura per als palaus exigents.</h2>
-                </div>
-                <p data-i18n="cellar_p1">El nostre celler és l'ànima de Borda Vella, un espai que acull la nostra gran passió pels vins i que respon a les expectatives dels palaus més exigents.</p>
-                <p data-i18n="cellar_p2">La nostra carta de vins inclou referències internacionals i nacionals. Tria el teu vi a la nostra sala de vins. Els nostres sommeliers t'ajudaran a trobar el maridatge perfecte.</p>
-            </div>
-            <div class="celler-media reveal">
-                <div class="celler-photo">
-                    <img src="celler_1.jpg" alt="Interior de la sala de vins">
-                </div>
-                <div class="celler-videos">
-                    <video src="celler_video.mp4" controls muted autoplay loop></video>
-                </div>
-            </div>
+    <section class="section section-light" id="celler">
+      <div class="container celler-layout">
+        <div class="celler-media reveal">
+          <img src="borda_vella_4.jpg" alt="Interior del Celler de Borda Vella" class="celler-photo">
         </div>
+        <div class="celler-info reveal reveal-delay-2">
+          <div class="section-header">
+            <p class="eyebrow" data-i18n="cellar_eyebrow">El Nostre Celler</p>
+            <h2 data-i18n="cellar_h2">Una cava d'altura per als palaus exigents.</h2>
+          </div>
+          <p data-i18n="cellar_p1">El nostre celler és l'ànima de Borda Vella, un espai que acull la nostra gran passió pels vins i que respon a les expectatives dels palaus més exigents.</p>
+          <p data-i18n="cellar_p2">La nostra carta de vins inclou referències internacionals i nacionals. Tria el teu vi a la nostra sala de vins. Els nostres sommeliers t'ajudaran a trobar el maridatge perfecte.</p>
+        </div>
+      </div>
     </section>
 
     <section class="section section-dark" id="contacte">
-        <div class="container contact-layout-new">
-            <div class="contact-info reveal">
-                <div class="section-header">
-                    <p class="eyebrow" data-i18n="contact_eyebrow">Localització</p>
-                    <h2 data-i18n="contact_h2">T'esperem a Encamp.</h2>
-                    <p data-i18n="contact_p1">Si vols reservar, utilitza el formulari ràpid de dalt. Per a esdeveniments privats o consultes, no dubtis a trucar-nos.</p>
-                </div>
-                
-                <div class="contact-details">
-                    <h3><span data-i18n="contact_find_us">Troba'ns:</span></h3>
-                    <div class="contact-detail">
-                        <i class="fa fa-map-marker"></i>
-                        <span data-i18n="contact_address">Carrer Major, s/n, AD200 Encamp, Andorra</span>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fa fa-globe"></i>
-                        <span data-i18n="contact_gps">GPS: 42.5342, 1.5835</span>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fa fa-phone"></i>
-                        <a href="tel:+376831308" data-i18n="contact_phone">+376 831 308</a>
-                    </div>
-                    <h3 style="margin-top: 2rem;"><span data-i18n="contact_schedule_title">Horaris:</span></h3>
-                    <div class="contact-schedule">
-                        <p data-i18n="contact_schedule_1">Dimarts - Dissabte: 13:30 - 15:00 / 20:30 - 22:00</p>
-                        <p data-i18n="contact_schedule_2">Dilluns i Diumenge: Tancat (Excepte Festius)</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="map-container reveal reveal-delay-2">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d147.27!2d1.5834863388701833!3d42.53424681617482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a5fb04b77f9503%3A0x6d9f0a597d3a01ff!2sRestaurant%20Borda%20Vella!5e0!3m2!1sca!2ses!4v1703673539956!5m2!1sca!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow" data-i18n="contact_eyebrow">Localització</p>
+          <h2 data-i18n="contact_h2">T'esperem a Encamp.</h2>
+          <p data-i18n="contact_p1">Si vols reservar, utilitza el formulari ràpid de dalt. Per a esdeveniments privats o consultes, no dubtis a trucar-nos.</p>
         </div>
+
+        <div class="contact-grid">
+          <div class="contact-card reveal reveal-delay-1">
+            <h3 data-i18n="contact_find_us">Troba'ns:</h3>
+            <ul class="contact-info">
+              <li>
+                <a href="https://maps.app.goo.gl/hG1X9S53bM7sR3rN6" target="_blank">
+                  <i class="fa fa-map-marker"></i>
+                  <span data-i18n="contact_address">Carrer Major, s/n, AD200 Encamp, Andorra</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://maps.app.goo.gl/hG1X9S53bM7sR3rN6" target="_blank">
+                  <i class="fa fa-location-arrow"></i>
+                  <span data-i18n="contact_gps">GPS: 42.5342, 1.5835</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+376831308">
+                  <i class="fa fa-phone"></i>
+                  <span data-i18n="contact_phone">+376 831 308</span>
+                </a>
+              </li>
+            </ul>
+            
+            <h3 data-i18n="contact_schedule_title" style="margin-top: 2rem;">Horaris:</h3>
+            <ul class="schedule-list">
+                <li data-i18n="contact_schedule_1"><strong>Dimarts - Dissabte:</strong> 13:30 - 15:00 / 20:30 - 22:00</li>
+                <li data-i18n="contact_schedule_2"><strong>Dilluns i Diumenge:</strong> Tancat (Excepte festius)</li>
+            </ul>
+          </div>
+          
+          <div class="contact-map reveal reveal-delay-2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11750.605335805504!2d1.579482903740924!3d42.53633659223136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a5f410c598a76d%3A0xc3f345c26b528f9d!2sBorda%20Vella!5e0!3m2!1sca!2ses!4v1701358350162!5m2!1sca!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
     </section>
-
+    
     <footer class="site-footer">
-        <div class="container">
-            <div class="footer-links">
-                <a href="#home" data-i18n="nav_history">Inici</a>
-                <a href="#historia" data-i18n="nav_history">Història</a>
-                <a href="#gastronomia" data-i18n="nav_gastronomy">Carta</a>
-                <a href="#contacte" data-i18n="nav_contact">Contacte</a>
-            </div>
-            <p class="footer-copy">© <span id="current-year">2023</span> Borda Vella. Tots els drets reservats.</p>
+        <div class="footer-links">
+            <a href="#historia" data-i18n="nav_history">Història</a>
+            <a href="#gastronomia" data-i18n="nav_gastronomy">Gastronomia</a>
+            <a href="#celler" data-i18n="nav_cellar">Celler</a>
+            <a href="#contacte" data-i18n="nav_contact">Contacte</a>
         </div>
+        <p class="footer-copy">&copy; <span id="current-year">2025</span> Borda Vella. Tots els drets reservats.</p>
     </footer>
 
     <div class="social-float">
-        <a href="[URL_INSTAGRAM]" target="_blank" class="sf-btn" title="Instagram">
-            <i class="fa fa-instagram"></i>
-        </a>
-        <a href="[URL_TRIPADVISOR]" target="_blank" class="sf-btn" title="TripAdvisor">
-            <i class="fa fa-tripadvisor"></i>
-        </a>
-        <a href="https://wa.me/376831308" target="_blank" class="sf-btn" title="Reservar per WhatsApp">
+        <a href="https://wa.me/376831308" target="_blank" class="sf-btn" title="WhatsApp Borda Vella">
             <i class="fa fa-whatsapp"></i>
         </a>
         <button class="sf-btn" data-open-reserva title="Reservar Taula">
@@ -1474,736 +1462,776 @@
         </button>
     </div>
 
-    <div class="modal-reserva" data-reserva-modal>
-        <div class="modal-reserva-inner">
-            <button class="modal-close" data-close-reserva>
-                <i class="fa fa-times"></i>
-            </button>
-            <h2 data-i18n="modal_h2">Reserva la teva taula</h2>
-            <p data-i18n="modal_p1">Omple el següent formulari per confirmar la teva reserva. Rebràs una confirmació al teu correu electrònic.</p>
+  </div>
 
-            <form class="modal-form" data-reserva-form>
-                <div class="form-group">
-                    <label for="modal-name" data-i18n="form_name">Nombre y Apellidos</label>
-                    <input type="text" id="modal-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="modal-email" data-i18n="form_email">Email</label>
-                    <input type="email" id="modal-email" required>
-                </div>
-                <div class="form-group">
-                    <label for="modal-phone" data-i18n="form_phone">Teléfono</label>
-                    <input type="tel" id="modal-phone" required>
-                </div>
-                <div class="form-cols-2">
-                    <div class="form-group">
-                        <label for="modal-date" data-i18n="form_date">Fecha</label>
-                        <input type="date" id="modal-date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="modal-time" data-i18n="form_time">Hora</label>
-                        <input type="time" id="modal-time" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="modal-people" data-i18n="form_people">Comensals</label>
-                    <select id="modal-people" required>
-                        <option value="1">1 persona</option>
-                        <option value="2">2 persones</option>
-                        <option value="3">3 persones</option>
-                        <option value="4" selected>4 persones</option>
-                        <option value="5">5 persones</option>
-                        <option value="6">6 persones</option>
-                        <option value="7">7 persones</option>
-                        <option value="8">8 persones</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn-primary modal-form-full" data-i18n="form_submit">Confirmar la Reserva</button>
-            </form>
+  <div class="modal-reserva" data-modal-reserva>
+    <div class="modal-content">
+      <button class="modal-close" data-close-reserva><i class="fa fa-times"></i></button>
+      <div class="modal-header">
+        <h2 data-i18n="modal_h2">Reserva la teva Taula.</h2>
+        <p data-i18n="modal_p1" style="opacity: .8;">Utilitza aquest formulari ràpid per reservar la teva taula. Rebràs una confirmació en pocs minuts.</p>
+      </div>
+      
+      <form action="#" method="POST" id="full-reserva-form">
+        <div class="form-cols-2">
+          <div class="form-group form-full">
+            <label for="fr-name" data-i18n="form_name">Nom i Cognoms</label>
+            <input type="text" id="fr-name" name="name" required>
+          </div>
+          <div class="form-group form-full">
+            <label for="fr-email" data-i18n="form_email">E-mail</label>
+            <input type="email" id="fr-email" name="email" required>
+          </div>
+          <div class="form-group form-full">
+            <label for="fr-phone" data-i18n="form_phone">Telèfon</label>
+            <input type="tel" id="fr-phone" name="phone" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="fr-date" data-i18n="form_date">Data</label>
+            <input type="date" id="fr-date" name="date" required value="2025-12-12">
+          </div>
+          <div class="form-group">
+            <label for="fr-time" data-i18n="form_time">Hora</label>
+            <input type="time" id="fr-time" name="time" required value="20:30">
+          </div>
+          <div class="form-group form-full">
+            <label for="fr-people" data-i18n="form_people">Convidats</label>
+            <select id="fr-people" name="people" required>
+              <option value="2">2 persones</option>
+              <option value="4">4 persones</option>
+              <option value="6">6 persones</option>
+              <option value="8">8 persones</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary form-full" data-i18n="form_submit">Confirmar la Reserva</button>
         </div>
+      </form>
+      
     </div>
+  </div>
 
-</div>
 
-<script>
+  <script>
     // ==============================================
     // TRADUCCIONES (i18n Object)
     // ==============================================
     const i18n = {
-        ca: {
-            // Texts for the new dynamic accordion buttons
-            toggle_open: "Mostrar Plats",
-            toggle_close: "Ocultar Plats",
+      ca: {
+        // Texts for the new dynamic accordion buttons
+        toggle_open: "Mostrar Plats",
+        toggle_close: "Ocultar Plats",
 
-            // Header
-            title: "Borda Vella · Gastronomia de muntanya a Encamp",
-            title_subtitle: "Encamp · Andorra",
-            nav_history: "Història",
-            nav_gastronomy: "Gastronomia",
-            nav_cellar: "Celler",
-            nav_contact: "Contacte",
-            nav_book_desktop: "Reservar Taula",
+        // Header
+        title: "Borda Vella · Gastronomia de muntanya a Encamp",
+        title_subtitle: "Encamp · Andorra",
+        nav_history: "Història",
+        nav_gastronomy: "Gastronomia",
+        nav_cellar: "Celler",
+        nav_contact: "Contacte",
+        nav_book_desktop: "Reservar Taula",
 
-            // Hero
-            hero_kicker: "Des de 1972",
-            hero_h1: "L'autèntica gastronomia de muntanya d'Andorra.",
-            hero_p1: "El punt de trobada ideal a Encamp. Cuina de brasa, producte de proximitat i una carta de vins que et sorprendrà.",
-            hero_book_cta: "Reserva Ara",
-            hero_menu_cta: "Veure la Carta",
-            hero_phone: "O truca'ns: ",
-            hero_phone_number: "+376 831 308",
-            hero_card_badge_group: '<span class="hero-badge-dot"></span> <span data-i18n="hero_card_badge">Obert Avui</span>',
-            hero_card_badge: "Obert Avui",
-            hero_card_h3: "Reserva Ràpida",
-            hero_card_p1: "Per a reserves de menys de 8 persones. Per a grups, truca'ns.",
-            hero_scroll: "Desplaçar",
+        // Hero
+        hero_kicker: "Des de 1972",
+        hero_h1: "L'autèntica gastronomia de muntanya d'Andorra.",
+        hero_p1: "El punt de trobada ideal a Encamp. Cuina de brasa, producte de proximitat i una carta de vins que et sorprendrà.",
+        hero_book_cta: "Reserva Ara",
+        hero_menu_cta: "Veure la Carta",
+        hero_phone: "O truca'ns: ",
+        hero_phone_number: "+376 831 308",
+        hero_card_badge_group: '<span class="hero-badge-dot"></span> <span>Obert</span>',
+        hero_card_badge_text: "Obert",
+        hero_card_h3: "Reserva Ràpida",
+        hero_card_p1: "Per a reserves de menys de 8 persones. Per a grups, truqueu-nos directament.",
+        hero_scroll: "Desplaçar",
 
-            // Història
-            history_eyebrow: "El Nostre Llinatge",
-            history_h2: "Cuina de Borda, Visió de Xef.",
-            history_p1: "Borda Vella va obrir les seves portes el 1972, convertint-se en un dels restaurants més emblemàtics d'Encamp i Andorra. La seva història és la de les 'bordes' andorranes, on la <strong>tradició</strong>, el <strong>producte del territori</strong> i l'<strong>hospitalitat</strong> són els pilars fonamentals. Al llarg dels anys, el nostre Xef, Manel Morgade, ha perfeccionat el seu art en cuines d'1 Estrella Michelin i hotels 5 estrelles. Ha agafat aquest projecte amb una filosofia clara: <strong>viure per menjar i cuinar per compartir</strong> el sabor autèntic. El <strong>foc</strong> és el cor de la seva cuina, i la nostra brasa l'escenari on transforma la matèria primera, honrant el producte amb l'honestedat de les brasas. Aquí es fusionen dos llegats: la <strong>tradició inquebrantable de la muntanya</strong> i la <strong>visió sense complexos d'un Xef</strong> que ha dedicat la seva vida a la gastronomia. Borda Vella és la promesa del nostre Xef d'oferir una experiència autèntica on el sabor de la tradició i l'audàcia culinària es troben a la seva taula.",
-            history_pill_1_title: "Cuina de Brasa",
-            history_pill_1_text: "El foc com a tècnica culinària.",
-            history_pill_2_title: "Producte d'Autor",
-            history_pill_2_text: "Visió i tècnica de Xef Michelin.",
-            history_pill_3_title: "Borda Tradicional",
-            history_pill_3_text: "L'encant rústic d'Encamp.",
+        // Història
+        history_eyebrow: "La Nostra Història",
+        history_h2: "L'essència de la cuina de muntanya, amb una nova visió.",
+        history_p1: "Borda Vella va obrir les seves portes el 1972, convertint-se en un dels restaurants més emblemàtics d'Encamp i Andorra. La seva història és la de les 'bordes' andorranes, on la <strong>tradició</strong>, el <strong>producte del territori</strong> i l'<strong>hospitalitat</strong> són els pilars fonamentals. Al llarg dels anys, el nostre Xef, Manel Morgade, ha perfeccionat el seu art en cuines d'1 Estrella Michelin i hotels 5 estrelles. Ha agafat aquest projecte amb una filosofia clara: <strong>viure per menjar i cuinar per compartir</strong> el sabor autèntic. El <strong>foc</strong> és el cor de la seva cuina, i la nostra brasa l'escenari on transforma la matèria primera, honrant el producte amb l'honestedat de les brasas. Aquí es fusionen dos llegats: la <strong>tradició inquebrantable de la muntanya</strong> i la <strong>visió sense complexos d'un Xef</strong> que ha dedicat la seva vida a la gastronomia. Borda Vella és la promesa del nostre Xef d'oferir una experiència autèntica on el sabor de la tradició i l'audàcia culinària es troben a la seva taula.",
+        history_pill_1_title: "Cuina de Brasa",
+        history_pill_1_text: "El foc com a tècnica culinària.",
+        history_pill_2_title: "Producte d'Autor",
+        history_pill_2_text: "Visió i tècnica de Xef Michelin.",
+        history_pill_3_title: "Borda Tradicional",
+        history_pill_3_text: "L'encant rústic d'Encamp.",
 
-            // Experiències
-            experiences_eyebrow: "Moment BV",
-            experiences_h2: "Una experiència única, més enllà del menjar.",
-            experiences_p1: "Disposem de diferents espais i salons privats per a grups i celebracions especials. Ja sigui una reunió familiar, un esdeveniment d'empresa o una vetllada íntima, farem de la teva experiència un record inoblidable.",
-            experiences_cta: "Reserva la teva Experiència",
+        // Experiències
+        experiences_eyebrow: "Moment BV",
+        experiences_h2: "Una experiència única, més enllà del menjar.",
+        experiences_p1: "Disposem de diferents espais i salons privats per a grups i celebracions especials. Ja sigui una reunió familiar, un esdeveniment d'empresa o una vetllada íntima, farem de la teva experiència un record inoblidable.",
+        experiences_cta: "Reserva la teva Experiència",
 
-            // Gastronomia
-            gastronomy_eyebrow: "Nostra Carta",
-            gastronomy_h2: "La millor cuina de muntanya, reinventada.",
-            gastronomy_p1: "Des dels clàssics a la brasa i arrossos de muntanya, fins als plats de temporada amb un toc d'avantguarda.",
+        // Gastronomia
+        gastronomy_eyebrow: "Nostra Carta",
+        gastronomy_h2: "La millor cuina de muntanya, reinventada.",
+        gastronomy_p1: "Des dels clàssics a la brasa i arrossos de muntanya, fins als plats de temporada amb un toc d'avantguarda.",
 
-            // Títols de Seccions de la Carta
-            menu_section_1_title: "Un tastet per picar i gaudir",
-            menu_section_2_title: "L'art de coure bé",
-            menu_section_3_title: "Els Plats Forts",
-            menu_section_4_title: "L'ÚLTIM MOS", // CORREGIDO
+        // Títols de Seccions de la Carta
+        menu_section_1_title: "Un tastet per picar i gaudir",
+        menu_section_2_title: "L'art de coure bé",
+        menu_section_3_title: "Els Plats Forts",
+        menu_section_4_title: "L'ÚLTIM MOS", // CORREGIDO
 
-            // Plats (Pàgina 1 - Picar)
-            dish_1_name: "EL FOIE QUE ACARONA EL PALADAR <span>22,50 €</span>",
-            dish_1_desc: "Fet pel Xef Manel.",
-            dish_2_name: "CARPACCIO DE FILET DE VACA VELLA <span>19,50 €</span>",
-            dish_2_desc: "amb foie, oli de Tòfona, BRUTAL!!!",
-            dish_3_name: "CARPACCIO D'ENTRECOT DE VEDELLA GALLEGA <span>26,00 €</span>",
-            dish_3_desc: "D'Albert Adrià (sí, aquest!!!), intens i saborós.",
-            dish_4_name: "CARPACCIO DE GAMBA <span>22,00 €</span>",
-            dish_4_desc: "amb un gelat que et porta directe a la costa.",
-            dish_5_name: "LA NOSTRA CAPRESE <span>19,50 €</span>",
-            dish_5_desc: "Burrata Italiana, gelats d'albàbrega i tomàquet, pesto, oliva Kalamata... tot ben lligat, amb cullereta.",
-            dish_6_name: "ANCHOES DE SANTOÑA (de les Bones) <span>15,50 €</span>",
-            dish_6_desc: "Don Bocarte, 6 filets per compartir, o no...",
-            dish_7_name: "GILDA GILDA GILDA <span>15,50 €</span>",
-            dish_7_desc: "Petites, salades i amb molt de nervi.",
-            dish_8_name: "PA DE COCA DE FOLGUEROLES <span>3,50 €</span>",
-            dish_8_desc: "Amb tomàquet, oli i sal. No cal complicar-ho. Suplement pa 1,75€. Pa sense gluten 3,50€.",
+        // Plats (Pàgina 1 - Picar)
+        dish_1_name: "EL FOIE QUE ACARONA EL PALADAR <span>22,50 €</span>",
+        dish_1_desc: "Fet pel Xef Manel.",
+        dish_2_name: "CARPACCIO DE FILET DE VACA VELLA <span>19,50 €</span>",
+        dish_2_desc: "amb foie, oli de Tòfona, BRUTAL!!!",
+        dish_3_name: "CARPACCIO D'ENTRECOT DE VEDELLA GALLEGA <span>26,00 €</span>",
+        dish_3_desc: "D'Albert Adrià (sí, aquest!!!), intens i saborós.",
+        dish_4_name: "CARPACCIO DE GAMBA <span>22,00 €</span>",
+        dish_4_desc: "Amb oli d'alfàbrega i fruita de la passió al costat.",
+        dish_5_name: "LA NOSTRA CAPRESE <span>19,50 €</span>",
+        dish_5_desc: "Burrata Italiana, gelats d'alfàbrega i de tomàquet, pesto, oliva Kalamata... tot ben lligat, amb cullereta.",
+        dish_6_name: "ANCHOVES DE SANTOÑA (de les Bones) <span>15,50 €</span>",
+        dish_6_desc: "Don Bocarte, 6 filets per compartir, o no...",
+        dish_7_name: "GILDA GILDA GILDA <span>15,50 €</span>",
+        dish_7_desc: "Petites, salades i amb molt de nervi.",
+        dish_8_name: "PA DE COCA DE FOLGUEROLES <span>3,50 €</span>",
+        dish_8_desc: "Amb tomàquet, oli i sal. No cal complicar-ho. Suplement pa 1,75€. Pa sense gluten 3,50€.",
 
-            // Plats (Pàgina 2 - L'art de coure bé)
-            dish_art_1_name: "GYOZAS CRUIXENTS <span>16,00 €</span>",
-            dish_art_1_desc: "De Carrillera i mel, banyades en salsa de curri i formatge scarmoza.",
-            dish_art_2_name: "LLAMÀNTOL SENSE FEINA <span>40,50 €</span>",
-            dish_art_2_desc: "Amb ou BIO i patates de l'àvia.",
-            dish_art_3_name: "CARXOFES CONFITADES <span>16,00 €</span>",
-            dish_art_3_desc: "Amb pasta de tòfona negra i foie.",
+        // Plats (Pàgina 2 - L'art de coure bé)
+        dish_art_1_name: "GYOZAS CRUIXENTS <span>16,00 €</span>",
+        dish_art_1_desc: "De Carrillera i mel, banyades en salsa de curri i formatge scarmoza.",
+        dish_art_2_name: "LLAMÀNTOL SENSE FEINA <span>40,50 €</span>",
+        dish_art_2_desc: "Amb ou BIO i patates de l'àvia.",
+        dish_art_3_name: "OUS FERRATS AMB SOBRASSADA <span>18,50 €</span>",
+        dish_art_3_desc: "Amb patates, oli de tòfona, i un toc de picant.",
+        dish_art_4_name: "CANELÓ TRADICIONAL <span>16,75 €</span>",
+        dish_art_4_desc: "De carn de rostir, amb beixamel de ceps i formatge de cabra.",
+        dish_art_5_name: "ARRÒS DE MUNTANYA AMB LLOBREGANT <span>35,00 €</span>",
+        dish_art_5_desc: "Melós, de ceps i llamàntol. Mínim 2 persones. Preu per persona.",
+        dish_art_6_name: "ARRÒS AMB BOTIFARRA DEL PAÍS <span>24,00 €</span>",
+        dish_art_6_desc: "Amb all negre i ceps. Mínim 2 persones. Preu per persona.",
 
-            // Plats (Pàgina 3 - Els plats forts)
-            dish_strong_1_name: "GALTA DE VEDELLA QUE ES DESFÀ SOLA <span>22,90 €</span>",
-            dish_strong_1_desc: "Amb un toc de cacau i parmentier.",
-            dish_strong_2_name: "FILET DE VACA VELLA CORONADA <span>32,20 €</span>",
-            dish_strong_2_desc: "Banyat amb salsa de Ceps, amb patates de forner.",
-            dish_strong_3_name: "ARRÒS CALDÓS DE TRUITA <span>24,50 €</span>",
-            dish_strong_3_desc: "Amb pollastre de pagès, i bolets de temporada (mínim 2 persones).",
-            dish_strong_4_name: "BACALLÀ AL PIL PIL AMB OLI DE XORIÇ <span>28,50 €</span>",
-            dish_strong_4_desc: "Amb ceba confitada i una espuma de patata.",
+        // Plats (Pàgina 3 - Plats Forts)
+        dish_main_1_name: "COSTELLES DE VEDELLA A LA BRASA <span>28,50 €</span>",
+        dish_main_1_desc: "Servides amb patates a lo pobre.",
+        dish_main_2_name: "ENTRECOT DE VACA Vella <span>29,50 €</span>",
+        dish_main_2_desc: "A la brasa, amb flor de sal, servit amb patates de guarnició.",
+        dish_main_3_name: "SOLOMILLO DE VACA A LA BRASA <span>34,50 €</span>",
+        dish_main_3_desc: "Amb salsa de ceps i foie.",
+        dish_main_4_name: "Pota de Pop a la Brasa <span>29,00 €</span>",
+        dish_main_4_desc: "Amb puré de patates trufat i pebre vermell de la Vera.",
+        dish_main_5_name: "LLOM DE BACALLÀ CONFITAT <span>28,50 €</span>",
+        dish_main_5_desc: "Amb espinacs i all negre.",
+        
+        // Plats (Pàgina 4 - Postres)
+        dish_dessert_1_name: "CREMA CATALANA <span>7,00 €</span>",
+        dish_dessert_1_desc: "La clàssica, amb el seu toc de canyella i llimona.",
+        dish_dessert_2_name: "TATÍN DE POMA <span>7,25 €</span>",
+        dish_dessert_2_desc: "Amb el seu gelat d'Armanyac i prunes macerades.",
+        dish_dessert_3_name: "EL COULANT <span>8,75 €</span>",
+        dish_dessert_3_desc: "Coulant pecat mortal de xocolata mig cuita amb oli d'oliva i una mica de sal.",
+        dish_dessert_4_name: "SORBETS DE LA CASA <span>5,75 €</span>",
+        dish_dessert_4_desc: "De Gintonic i Lima, gerdssilvestres, Festuc Esmeralda, i Mango.",
+        
+        // Celler
+        cellar_eyebrow: "El Nostre Celler",
+        cellar_h2: "Una cava d'altura per als palaus exigents.",
+        cellar_p1: "El nostre celler és l'ànima de Borda Vella, un espai que acull la nostra gran passió pels vins i que respon a les expectatives dels palaus més exigents.",
+        cellar_p2: "La nostra carta de vins inclou referències internacionals i nacionals. Tria el teu vi a la nostra sala de vins. Els nostres sommeliers t'ajudaran a trobar el maridatge perfecte.",
 
-            // Plats (Pàgina 4 - Postres)
-            dish_dessert_1_name: "MATÓ DEL PASTOR AMB MEL I NOUS <span>6,75 €</span>",
-            dish_dessert_1_desc: "El clàssic que mai falla.",
-            dish_dessert_2_name: "TATÍN DE POMA <span>7,25 €</span>",
-            dish_dessert_2_desc: "Amb el seu gelat d'Armanyac i prunes macerades.",
-            dish_dessert_3_name: "EL COULANT <span>8,75 €</span>",
-            dish_dessert_3_desc: "Coulant pecat mortal de xocolata mig cuita amb oli d'oliva i una mica de sal.",
-            dish_dessert_4_name: "SORBETS DE LA CASA <span>5,75 €</span>",
-            dish_dessert_4_desc: "De Gintonic i Lima, gerdssilvestres, Festuc Esmeralda, i Mango.",
+        // Contacte
+        contact_eyebrow: "Localització",
+        contact_h2: "T'esperem a Encamp.",
+        contact_p1: "Si vols reservar, utilitza el formulari ràpid de dalt. Per a esdeveniments privats o consultes, no dubtis a trucar-nos.",
+        contact_find_us: "Troba'ns:",
+        contact_address: "Carrer Major, s/n, AD200 Encamp, Andorra",
+        contact_gps: "GPS: 42.5342, 1.5835",
+        contact_phone: "+376 831 308",
+        contact_schedule_title: "Horaris:",
+        // Horarios Corregidos
+        contact_schedule_1: "Dimarts - Dissabte: 13:30 - 15:00 / 20:30 - 22:00",
+        contact_schedule_2: "Dilluns i Diumenge: Tancat (Excepte festius)",
 
-            // Celler
-            cellar_eyebrow: "El Nostre Celler",
-            cellar_h2: "Una cava d'altura per als palaus exigents.",
-            cellar_p1: "El nostre celler és l'ànima de Borda Vella, un espai que acull la nostra gran passió pels vins i que respon a les expectatives dels palaus més exigents.",
-            cellar_p2: "La nostra carta de vins inclou referències internacionals i nacionals. Tria el teu vi a la nostra sala de vins. Els nostres sommeliers t'ajudaran a trobar el maridatge perfecte.",
+        // Formularis
+        form_name: "Nom i Cognoms",
+        form_email: "E-mail",
+        form_phone: "Telèfon",
+        form_date: "Data",
+        form_time: "Hora",
+        form_people: "Convidats",
+        form_submit: "Confirmar la Reserva",
 
-            // Contacte
-            contact_eyebrow: "Localització",
-            contact_h2: "T'esperem a Encamp.",
-            contact_p1: "Si vols reservar, utilitza el formulari ràpid de dalt. Per a esdeveniments privats o consultes, no dubtis a trucar-nos.",
-            contact_find_us: "Troba'ns:",
-            contact_address: "Carrer Major, s/n, AD200 Encamp, Andorra",
-            contact_gps: "GPS: 42.5342, 1.5835",
-            contact_phone: "+376 831 308",
-            contact_schedule_title: "Horaris:", 
-            contact_schedule_1: "Dimarts - Dissabte: 13:30 - 15:00 / 20:30 - 22:00",
-            contact_schedule_2: "Dilluns i Diumenge: Tancat (Excepte Festius)",
+        // Modal
+        modal_h2: "Reserva la teva Taula.",
+        modal_p1: "Utilitza aquest formulari ràpid per reservar la teva taula. Rebràs una confirmació en pocs minuts."
+      },
+      es: {
+        // Texts for the new dynamic accordion buttons
+        toggle_open: "Mostrar Platos",
+        toggle_close: "Ocultar Platos",
 
-            // Formularis
-            form_name: "Nombre i Cognoms",
-            form_email: "Email",
-            form_phone: "Telèfon",
-            form_date: "Data",
-            form_time: "Hora",
-            form_people: "Comensals",
-            form_submit: "Confirmar la Reserva",
+        // Header
+        title: "Borda Vella · Gastronomía de montaña en Encamp",
+        title_subtitle: "Encamp · Andorra",
+        nav_history: "Historia",
+        nav_gastronomy: "Gastronomía",
+        nav_cellar: "Bodega",
+        nav_contact: "Contacto",
+        nav_book_desktop: "Reservar Mesa",
 
-            // Modal
-            modal_h2: "Reserva la teva taula",
-            modal_p1: "Omple el següent formulari per confirmar la teva reserva. Rebràs una confirmació al teu correu electrònic.",
+        // Hero
+        hero_kicker: "Desde 1972",
+        hero_h1: "La auténtica gastronomía de montaña de Andorra.",
+        hero_p1: "El punto de encuentro ideal en Encamp. Cocina de brasa, producto de proximidad y una carta de vinos que te sorprenderá.",
+        hero_book_cta: "Reserva Ahora",
+        hero_menu_cta: "Ver la Carta",
+        hero_phone: "O llámanos: ",
+        hero_phone_number: "+376 831 308",
+        hero_card_badge_group: '<span class="hero-badge-dot"></span> <span>Abierto</span>',
+        hero_card_badge_text: "Abierto",
+        hero_card_h3: "Reserva Rápida",
+        hero_card_p1: "Para reservas de menos de 8 personas. Para grupos, llámanos directamente.",
+        hero_scroll: "Desplazar",
 
-            // Footer
-            footer_copy: "Tots els drets reservats.",
-        },
-        es: {
-            // Texts for the new dynamic accordion buttons
-            toggle_open: "Mostrar Platos",
-            toggle_close: "Ocultar Platos",
+        // Història
+        history_eyebrow: "Nuestra Historia",
+        history_h2: "La esencia de la cocina de montaña, con una nueva visión.",
+        history_p1: "Borda Vella abrió sus puertas en 1972, convirtiéndose en uno de los restaurantes más emblemáticos de Encamp y Andorra. Su historia es la de las 'bordas' andorranas, donde la <strong>tradición</strong>, el <strong>producto del territorio</strong> y la <strong>hospitalidad</strong> son los pilares fundamentales. A lo largo de los años, nuestro Chef, Manel Morgade, ha perfeccionado su arte en cocinas de 1 Estrella Michelin y hoteles 5 estrellas. Ha asumido este proyecto con una filosofía clara: <strong>vivir para comer y cocinar para compartir</strong> el sabor auténtico. El <strong>fuego</strong> es el corazón de su cocina, y nuestra brasa el escenario donde transforma la materia prima, honrando el producto con la honestidad de las brasas. Aquí se fusionan dos legados: la <strong>tradición inquebrantable de la montaña</strong> y la <strong>visión sin complejos de un Chef</strong> que ha dedicado su vida a la gastronomía. Borda Vella es la promesa de nuestro Chef de ofrecer una experiencia auténtica donde el sabor de la tradición y la audacia culinaria se encuentran en su mesa.",
+        history_pill_1_title: "Cocina de Brasa",
+        history_pill_1_text: "El fuego como técnica culinaria.",
+        history_pill_2_title: "Producto de Autor",
+        history_pill_2_text: "Visión y técnica de Chef Michelin.",
+        history_pill_3_title: "Borda Tradicional",
+        history_pill_3_text: "El encanto rústico de Encamp.",
 
-            // Header
-            title: "Borda Vella · Gastronomía de montaña en Encamp",
-            title_subtitle: "Encamp · Andorra",
-            nav_history: "Historia",
-            nav_gastronomy: "Gastronomía",
-            nav_cellar: "Bodega",
-            nav_contact: "Contacto",
-            nav_book_desktop: "Reservar Mesa",
+        // Experiències
+        experiences_eyebrow: "Momento BV",
+        experiences_h2: "Una experiencia única, más allá de la comida.",
+        experiences_p1: "Disponemos de diferentes espacios y salones privados para grupos y celebraciones especiales. Ya sea una reunión familiar, un evento de empresa o una velada íntima, haremos de tu experiencia un recuerdo inolvidable.",
+        experiences_cta: "Reserva tu Experiencia",
 
-            // Hero
-            hero_kicker: "Desde 1972",
-            hero_h1: "La auténtica gastronomía de montaña de Andorra.",
-            hero_p1: "El punto de encuentro ideal en Encamp. Cocina de brasa, producto de proximidad y una carta de vinos que te sorprenderá.",
-            hero_book_cta: "Reserva Ahora",
-            hero_menu_cta: "Ver la Carta",
-            hero_phone: "O llámanos: ",
-            hero_phone_number: "+376 831 308",
-            hero_card_badge_group: '<span class="hero-badge-dot"></span> <span data-i18n="hero_card_badge">Abierto Hoy</span>',
-            hero_card_badge: "Abierto Hoy",
-            hero_card_h3: "Reserva Rápida",
-            hero_card_p1: "Para reservas de menos de 8 personas. Para grupos, llámanos.",
-            hero_scroll: "Desplazar",
+        // Gastronomia
+        gastronomy_eyebrow: "Nuestra Carta",
+        gastronomy_h2: "La mejor cocina de montaña, reinventada.",
+        gastronomy_p1: "Desde los clásicos a la brasa y arroces de montaña, hasta los platos de temporada con un toque de vanguardia.",
 
-            // Història
-            history_eyebrow: "Nuestro Linaje",
-            history_h2: "Cocina de Borda, Visión de Chef.",
-            history_p1: "Borda Vella abrió sus puertas en 1972, convirtiéndose en uno de los puntos de referencia gastronómicos de la parroquia de Encamp. Su historia es la de las 'bordas' andorranas, donde la <strong>tradición</strong>, el <strong>producto del territorio</strong> y la <strong>hospitalidad</strong> son los pilares fundamentales. A lo largo de los años, nuestro Chef, Manel Morgade, ha perfeccionado su arte en cocinas de 1 Estrella Michelin y hoteles 5 estrellas. Ha cogido este proyecto con una filosofía clara: <strong>vivir para comer y cocinar para compartir</strong> el sabor auténtico. El <strong>fuego</strong> es el corazón de su cocina, y nuestra brasa el escenario donde transforma la materia prima, honrando el producto con la honestidad de las brasas. Aquí se fusionan dos legados: la <strong>tradición inquebrantable de la montaña</strong> y la <strong>visión sin complejos de un Chef</strong> que ha dedicado su vida a la gastronomía. Borda Vella es la promesa de nuestro Chef de ofrecer una experiencia auténtica donde el sabor de la tradición y la audacia culinaria se encuentran en su mesa.",
-            history_pill_1_title: "Cocina de Brasa",
-            history_pill_1_text: "El fuego como técnica culinaria.",
-            history_pill_2_title: "Producto de Autor",
-            history_pill_2_text: "Visión y técnica de Chef Michelin.",
-            history_pill_3_title: "Borda Tradicional",
-            history_pill_3_text: "El encanto rústico de Encamp.",
+        // Títols de Seccions de la Carta
+        menu_section_1_title: "Un pequeño aperitivo para picar y disfrutar",
+        menu_section_2_title: "El arte de cocer bien",
+        menu_section_3_title: "Los Platos Fuertes",
+        menu_section_4_title: "El Último Bocado",
 
-            // Experiencias
-            experiences_eyebrow: "Momento BV",
-            experiences_h2: "Una experiencia única, más allá de la comida.",
-            experiences_p1: "Disponemos de diferentes espacios y salones privados para grupos y celebraciones especiales. Ya sea una reunión familiar, un evento de empresa o una velada íntima, haremos de tu experiencia un recuerdo inolvidable.",
-            experiences_cta: "Reserva tu Experiencia",
+        // Plats (Pàgina 1 - Picar)
+        dish_1_name: "EL FOIE QUE ACARICIA EL PALADAR <span>22,50 €</span>",
+        dish_1_desc: "Hecho por el Chef Manel.",
+        dish_2_name: "CARPACCIO DE SOLOMILLO DE VACA VIEJA <span>19,50 €</span>",
+        dish_2_desc: "con foie, aceite de Trufa, ¡¡¡BRUTAL!!!",
+        dish_3_name: "CARPACCIO DE ENTRECOT DE TERNERA GALLEGA <span>26,00 €</span>",
+        dish_3_desc: "De Albert Adrià (¡sí, ese!), intenso y sabroso.",
+        dish_4_name: "CARPACCIO DE GAMBA <span>22,00 €</span>",
+        dish_4_desc: "Con aceite de albahaca y fruta de la pasión al lado.",
+        dish_5_name: "NUESTRA CAPRESE <span>19,50 €</span>",
+        dish_5_desc: "Burrata Italiana, helados de albahaca y de tomate, pesto, aceituna Kalamata... todo bien ligado, con cucharilla.",
+        dish_6_name: "ANCHOAS DE SANTOÑA (de las Buenas) <span>15,50 €</span>",
+        dish_6_desc: "Don Bocarte, 6 filetes para compartir, o no...",
+        dish_7_name: "GILDA GILDA GILDA <span>15,50 €</span>",
+        dish_7_desc: "Pequeñas, saladas y con mucho nervio.",
+        dish_8_name: "PAN DE COCA DE FOLGUEROLES <span>3,50 €</span>",
+        dish_8_desc: "Con tomate, aceite y sal. No hay que complicarlo. Suplemento pan 1,75€. Pan sin gluten 3,50€.",
 
-            // Gastronomia
-            gastronomy_eyebrow: "Nuestra Carta",
-            gastronomy_h2: "La mejor cocina de montaña, reinventada.",
-            gastronomy_p1: "Desde los clásicos a la brasa y arroces de montaña, hasta los platos de temporada con un toque de vanguardia.",
+        // Plats (Pàgina 2 - L'art de coure bé)
+        dish_art_1_name: "GYOZAS CRUJIENTES <span>16,00 €</span>",
+        dish_art_1_desc: "De Carrillera y miel, bañadas en salsa de curry y queso scarmoza.",
+        dish_art_2_name: "BOGAVANTE SIN EMPLEO <span>40,50 €</span>",
+        dish_art_2_desc: "Con huevo BIO y patatas de la abuela.",
+        dish_art_3_name: "HUEVOS FRITOS CON SOBRASADA <span>18,50 €</span>",
+        dish_art_3_desc: "Con patatas, aceite de trufa, y un toque de picante.",
+        dish_art_4_name: "CANELÓN TRADICIONAL <span>16,75 €</span>",
+        dish_art_4_desc: "De carne de asado, con bechamel de ceps y queso de cabra.",
+        dish_art_5_name: "ARROZ DE MONTAÑA CON BOGAVANTE <span>35,00 €</span>",
+        dish_art_5_desc: "Meloso, de ceps y bogavante. Mínimo 2 personas. Precio por persona.",
+        dish_art_6_name: "ARROZ CON BUTIFARRA DEL PAÍS <span>24,00 €</span>",
+        dish_art_6_desc: "Con ajo negro y ceps. Mínimo 2 personas. Precio por persona.",
 
-            // Títols de Seccions de la Carta
-            menu_section_1_title: "Un aperitivo para picar y disfrutar",
-            menu_section_2_title: "El arte de la buena cocción",
-            menu_section_3_title: "Los Platos Fuertes",
-            menu_section_4_title: "EL ÚLTIMO BOCADO", // CORREGIDO
+        // Plats (Pàgina 3 - Plats Forts)
+        dish_main_1_name: "COSTILLAS DE TERNERA A LA BRASA <span>28,50 €</span>",
+        dish_main_1_desc: "Servidas con patatas a lo pobre.",
+        dish_main_2_name: "ENTRECOT DE VACA VIEJA <span>29,50 €</span>",
+        dish_main_2_desc: "A la brasa, con flor de sal, servido con patatas de guarnición.",
+        dish_main_3_name: "SOLOMILLO DE VACA A LA BRASA <span>34,50 €</span>",
+        dish_main_3_desc: "Con salsa de ceps y foie.",
+        dish_main_4_name: "PATA DE PULPO A LA BRASA <span>29,00 €</span>",
+        dish_main_4_desc: "Con puré de patatas trufado y pimentón de la Vera.",
+        dish_main_5_name: "LOMO DE BACALAO CONFITADO <span>28,50 €</span>",
+        dish_main_5_desc: "Con espinacas y ajo negro.",
+        
+        // Plats (Pàgina 4 - Postres)
+        dish_dessert_1_name: "CREMA CATALANA <span>7,00 €</span>",
+        dish_dessert_1_desc: "La clásica, con su toque de canela y limón.",
+        dish_dessert_2_name: "TATÍN DE MANZANA <span>7,25 €</span>",
+        dish_dessert_2_desc: "Con su helado de Armagnac y ciruelas maceradas.",
+        dish_dessert_3_name: "EL COULANT <span>8,75 €</span>",
+        dish_dessert_3_desc: "Coulant pecado mortal de chocolate medio cocido con aceite de oliva y un poco de sal.",
+        dish_dessert_4_name: "SORBETES DE LA CASA <span>5,75 €</span>",
+        dish_dessert_4_desc: "De Gintonic y Lima, frambuesas silvestres, Pistacho Esmeralda, y Mango.",
 
-            // Plats (Pàgina 1 - Picar)
-            dish_1_name: "EL FOIE QUE ACARICIA EL PALADAR <span>22,50 €</span>",
-            dish_1_desc: "Hecho por el Chef Manel.",
-            dish_2_name: "CARPACCIO DE FILETE DE VACA VIEJA <span>19,50 €</span>",
-            dish_2_desc: "con foie, aceite de Trufa, ¡¡¡BRUTAL!!!",
-            dish_3_name: "CARPACCIO DE ENTRECOT DE TERNERA GALLEGA <span>26,00 €</span>",
-            dish_3_desc: "De Albert Adrià (sí, ese!!!), intenso y sabroso.",
-            dish_4_name: "CARPACCIO DE GAMBA <span>22,00 €</span>",
-            dish_4_desc: "con un helado que te lleva directo a la costa.",
-            dish_5_name: "LA NOSTRA CAPRESE <span>19,50 €</span>",
-            dish_5_desc: "Burrata Italiana, helados de albahaca y tomate, pesto, oliva Kalamata... todo bien ligado, con cucharilla.",
-            dish_6_name: "ANCHOAS DE SANTOÑA (de las Buenas) <span>15,50 €</span>",
-            dish_6_desc: "Don Bocarte, 6 filetes para compartir, o no...",
-            dish_7_name: "GILDA GILDA GILDA <span>15,50 €</span>",
-            dish_7_desc: "Pequeñas, saladas y con mucho nervio.",
-            dish_8_name: "PAN DE COCA DE FOLGUEROLES <span>3,50 €</span>",
-            dish_8_desc: "Con tomate, aceite y sal. No hay que complicarlo. Suplemento pan 1,75€. Pan sin gluten 3,50€.",
+        // Celler
+        cellar_eyebrow: "Nuestra Bodega",
+        cellar_h2: "Una cava de altura para los paladares exigentes.",
+        cellar_p1: "Nuestra bodega es el alma de Borda Vella, un espacio que acoge nuestra gran pasión por los vinos y que responde a las expectativas de los paladares más exigentes.",
+        cellar_p2: "Nuestra carta de vinos incluye referencias internacionales y nacionales. Elige tu vino en nuestra sala de vinos. Nuestros sommeliers te ayudarán a encontrar el maridaje perfecto.",
 
-            // Plats (Pàgina 2 - L'art de coure bé)
-            dish_art_1_name: "GYOZAS CRUJIENTES <span>16,00 €</span>",
-            dish_art_1_desc: "De Carrillera y miel, bañadas en salsa de curry y queso scamorza ahumado.",
-            dish_art_2_name: "BOGAVANTE SIN TRABAJO <span>40,50 €</span>",
-            dish_art_2_desc: "Con huevo BIO y patatas de la abuela.",
-            dish_art_3_name: "ALCACHOFAS CONFITADAS <span>16,00 €</span>",
-            dish_art_3_desc: "Con pasta de trufa negra y foie.",
+        // Contacte
+        contact_eyebrow: "Localización",
+        contact_h2: "Te esperamos en Encamp.",
+        contact_p1: "Si deseas reservar, utiliza el formulario rápido de arriba. Para eventos privados o consultas, no dudes en llamarnos.",
+        contact_find_us: "Encuéntranos:",
+        contact_address: "Carrer Major, s/n, AD200 Encamp, Andorra",
+        contact_gps: "GPS: 42.5342, 1.5835",
+        contact_phone: "+376 831 308",
+        contact_schedule_title: "Horarios:",
+        // Horarios Corregidos
+        contact_schedule_1: "Martes - Sábado: 13:30 - 15:00 / 20:30 - 22:00",
+        contact_schedule_2: "Lunes y Domingo: Cerrado (Salvo festivos)",
 
-            // Plats (Pàgina 3 - Els plats forts)
-            dish_strong_1_name: "GALTA DE TERNERA QUE SE DESHACE SOLA <span>22,90 €</span>",
-            dish_strong_1_desc: "Con un toque de cacao y parmentier.",
-            dish_strong_2_name: "FILET DE VACA VIEJA CORONADA <span>32,20 €</span>",
-            dish_strong_2_desc: "Bañado en salsa de Ceps, con patatas panaderas.",
-            dish_strong_3_name: "ARROZ CALDOSO DE TRUCHA <span>24,50 €</span>",
-            dish_strong_3_desc: "Con pollo de corral, y setas de temporada (mínimo 2 personas).",
-            dish_strong_4_name: "BACALAO AL PIL PIL CON ACEITE DE CHORIZO <span>28,50 €</span>",
-            dish_strong_4_desc: "Con cebolla confitada y una espuma de patata.",
+        // Formularis
+        form_name: "Nombre y Apellidos",
+        form_email: "E-mail",
+        form_phone: "Teléfono",
+        form_date: "Fecha",
+        form_time: "Hora",
+        form_people: "Invitados",
+        form_submit: "Confirmar la Reserva",
 
-            // Plats (Pàgina 4 - Postres)
-            dish_dessert_1_name: "MATÓ DEL PASTOR CON MIEL Y NUECES <span>6,75 €</span>",
-            dish_dessert_1_desc: "El clásico que nunca falla.",
-            dish_dessert_2_name: "TATÍN DE MANZANA <span>7,25 €</span>",
-            dish_dessert_2_desc: "Con su helado de Armagnac y ciruelas maceradas.",
-            dish_dessert_3_name: "EL COULANT <span>8,75 €</span>",
-            dish_dessert_3_desc: "Coulant pecado mortal de chocolate medio cocido con aceite de oliva y un poco de sal.",
-            dish_dessert_4_name: "SORBETES DE LA CASA <span>5,75 €</span>",
-            dish_dessert_4_desc: "De Gintonic y Lima, frambuesas silvestres, Pistacho Esmeralda, y Mango.",
+        // Modal
+        modal_h2: "Reserva tu Mesa.",
+        modal_p1: "Utiliza este formulario rápido para reservar tu mesa. Recibirás una confirmación en pocos minutos."
+      },
+      en: {
+        // Texts for the new dynamic accordion buttons
+        toggle_open: "Show Dishes",
+        toggle_close: "Hide Dishes",
 
-            // Celler
-            cellar_eyebrow: "Nuestra Bodega",
-            cellar_h2: "Una cava de altura para los paladares exigentes.",
-            cellar_p1: "Nuestra bodega es el alma de Borda Vella, un espacio que acoge nuestra gran pasión por los vinos y que responde a las expectativas de los paladares más exigentes.",
-            cellar_p2: "Nuestra carta de vinos incluye referencias internacionales y nacionales. Elige tu vino en nuestra sala de vinos. Nuestros sommeliers te ayudarán a encontrar el maridaje perfecto.",
+        // Header
+        title: "Borda Vella · Mountain Gastronomy in Encamp",
+        title_subtitle: "Encamp · Andorra",
+        nav_history: "Our Story",
+        nav_gastronomy: "Gastronomy",
+        nav_cellar: "Cellar",
+        nav_contact: "Contact",
+        nav_book_desktop: "Book a Table",
 
-            // Contacte
-            contact_eyebrow: "Localización",
-            contact_h2: "Te esperamos en Encamp.",
-            contact_p1: "Si quieres reservar, utiliza el formulario rápido de arriba. Para eventos privados o consultas, no dudes en llamarnos.",
-            contact_find_us: "Encuéntranos:",
-            contact_address: "Carrer Major, s/n, AD200 Encamp, Andorra",
-            contact_gps: "GPS: 42.5342, 1.5835",
-            contact_phone: "+376 831 308",
-            contact_schedule_title: "Horario:", 
-            contact_schedule_1: "Martes - Sábado: 13:30 - 15:00 / 20:30 - 22:00",
-            contact_schedule_2: "Lunes y Domingo: Cerrado (Excepto Festivos)",
+        // Hero
+        hero_kicker: "Since 1972",
+        hero_h1: "The authentic mountain gastronomy of Andorra.",
+        hero_p1: "The ideal meeting point in Encamp. Grill cuisine, local products, and a wine list that will surprise you.",
+        hero_book_cta: "Book Now",
+        hero_menu_cta: "View Menu",
+        hero_phone: "Or call us: ",
+        hero_phone_number: "+376 831 308",
+        hero_card_badge_group: '<span class="hero-badge-dot"></span> <span>Open</span>',
+        hero_card_badge_text: "Open",
+        hero_card_h3: "Quick Reservation",
+        hero_card_p1: "For reservations of less than 8 people. For groups, please call us directly.",
+        hero_scroll: "Scroll Down",
 
-            // Formularis
-            form_name: "Nombre y Apellidos",
-            form_email: "Email",
-            form_phone: "Teléfono",
-            form_date: "Fecha",
-            form_time: "Hora",
-            form_people: "Comensales",
-            form_submit: "Confirmar la Reserva",
+        // Història
+        history_eyebrow: "Our Story",
+        history_h2: "The essence of mountain cuisine, with a new vision.",
+        history_p1: "Borda Vella opened its doors in 1972, becoming one of the most emblematic restaurants in Encamp and Andorra. Its story is that of the Andorran 'bordas' (traditional mountain houses), where <strong>tradition</strong>, <strong>local product</strong>, and <strong>hospitality</strong> are the fundamental pillars. Over the years, our Chef, Manel Morgade, has perfected his art in 1-Michelin Star kitchens and 5-star hotels. He has taken on this project with a clear philosophy: <strong>live to eat and cook to share</strong> the authentic flavor. <strong>Fire</strong> is the heart of his cuisine, and our grill is the stage where he transforms raw ingredients, honoring the product with the honesty of the embers. Here, two legacies merge: the <strong>unwavering tradition of the mountains</strong> and the <strong>uncompromising vision of a Chef</strong> who has dedicated his life to gastronomy. Borda Vella is our Chef's promise to offer an authentic experience where the taste of tradition and culinary boldness meet at your table.",
+        history_pill_1_title: "Grill Cuisine",
+        history_pill_1_text: "Fire as a culinary technique.",
+        history_pill_2_title: "Author's Product",
+        history_pill_2_text: "Vision and technique of a Michelin Chef.",
+        history_pill_3_title: "Traditional Borda",
+        history_pill_3_text: "The rustic charm of Encamp.",
 
-            // Modal
-            modal_h2: "Reserva tu mesa",
-            modal_p1: "Rellena el siguiente formulario para confirmar tu reserva. Recibirás una confirmación en tu correo electrónico.",
+        // Experiències
+        experiences_eyebrow: "BV Moment",
+        experiences_h2: "A unique experience, beyond the meal.",
+        experiences_p1: "We have different spaces and private rooms for groups and special celebrations. Whether it's a family gathering, a corporate event, or an intimate evening, we will make your experience an unforgettable memory.",
+        experiences_cta: "Book your Experience",
 
-            // Footer
-            footer_copy: "Todos los derechos reservados.",
-        },
-        en: {
-            // Texts for the new dynamic accordion buttons
-            toggle_open: "Show Dishes",
-            toggle_close: "Hide Dishes",
+        // Gastronomia
+        gastronomy_eyebrow: "Our Menu",
+        gastronomy_h2: "The best mountain cuisine, reinvented.",
+        gastronomy_p1: "From grilled classics and mountain rice dishes to seasonal dishes with a touch of avant-garde.",
 
-            // Header
-            title: "Borda Vella · Mountain Gastronomy in Encamp",
-            title_subtitle: "Encamp · Andorra",
-            nav_history: "History",
-            nav_gastronomy: "Gastronomy",
-            nav_cellar: "Cellar",
-            nav_contact: "Contact",
-            nav_book_desktop: "Book a Table",
+        // Títols de Seccions de la Carta
+        menu_section_1_title: "A little bit of everything to snack on and enjoy together",
+        menu_section_2_title: "The art of good cooking",
+        menu_section_3_title: "The Main Courses",
+        menu_section_4_title: "The Last Bite",
 
-            // Hero
-            hero_kicker: "Since 1972",
-            hero_h1: "The authentic mountain gastronomy of Andorra.",
-            hero_p1: "The ideal meeting point in Encamp. Grill cuisine, local products, and a wine list that will surprise you.",
-            hero_book_cta: "Book Now",
-            hero_menu_cta: "View Menu",
-            hero_phone: "Or call us: ",
-            hero_phone_number: "+376 831 308",
-            hero_card_badge_group: '<span class="hero-badge-dot"></span> <span data-i18n="hero_card_badge">Open Today</span>',
-            hero_card_badge: "Open Today",
-            hero_card_h3: "Quick Booking",
-            hero_card_p1: "For reservations under 8 people. For groups, please call us.",
-            hero_scroll: "Scroll",
+        // Plats (Pàgina 1 - Picar)
+        dish_1_name: "THE FOIE THAT CARESSES THE PALATE <span>22.50 €</span>",
+        dish_1_desc: "Made by Chef Manel.",
+        dish_2_name: "OLD COW FILLET CARPACCIO <span>19.50 €</span>",
+        dish_2_desc: "with foie, Truffle oil, BRUTAL!!!",
+        dish_3_name: "GALICIAN VEAL ENTRECÔTE CARPACCIO <span>26.00 €</span>",
+        dish_3_desc: "From Albert Adrià (yes, that one!), intense and flavorful.",
+        dish_4_name: "SHRIMP CARPACCIO <span>22.00 €</span>",
+        dish_4_desc: "With basil oil and passion fruit on the side.",
+        dish_5_name: "OUR CAPRESE <span>19.50 €</span>",
+        dish_5_desc: "Italian Burrata, basil and tomato ice creams, pesto, Kalamata olive... all well blended, served with a spoon.",
+        dish_6_name: "SANTOÑA ANCHOVIES (The Good Ones) <span>15.50 €</span>",
+        dish_6_desc: "Don Bocarte, 6 fillets to share, or not...",
+        dish_7_name: "GILDA GILDA GILDA <span>15.50 €</span>",
+        dish_7_desc: "Small, salty, and with a lot of nerve.",
+        dish_8_name: "FOLGUEROLES COCA BREAD <span>3.50 €</span>",
+        dish_8_desc: "With tomato, oil, and salt. No need to complicate. Bread supplement 1.75€. Gluten-free bread 3.50€.",
 
-            // Història
-            history_eyebrow: "Our Heritage",
-            history_h2: "Borda Cuisine, Chef's Vision.",
-            history_p1: "Borda Vella opened its doors in 1972, becoming one of the most emblematic restaurants in Encamp and Andorra. Its history is that of the Andorran 'bordas,' where <strong>tradition</strong>, <strong>local products</strong>, and <strong>hospitality</strong> are the fundamental pillars. Over the years, our Chef, Manel Morgade, has honed his art in 1 Michelin Star kitchens and 5-star hotels. He has taken on this project with a clear philosophy: <strong>live to eat and cook to share</strong> the authentic flavor. <strong>Fire</strong> is the heart of his cuisine, and our grill is the stage where he transforms raw materials, honoring the product with the honesty of the embers. Two legacies merge here: the <strong>unbreakable mountain tradition</strong> and the <strong>uncompromising vision of a Chef</strong> who has dedicated his life to gastronomy. Borda Vella is our Chef's promise to offer an authentic experience where the taste of tradition and culinary audacity meet at your table.",
-            history_pill_1_title: "Grill Cuisine",
-            history_pill_1_text: "Fire as a culinary technique.",
-            history_pill_2_title: "Signature Product",
-            history_pill_2_text: "Vision and technique of a Michelin Chef.",
-            history_pill_3_title: "Traditional Borda",
-            history_pill_3_text: "The rustic charm of Encamp.",
+        // Plats (Pàgina 2 - L'art de coure bé)
+        dish_art_1_name: "CRUNCHY GYOZAS <span>16.00 €</span>",
+        dish_art_1_desc: "Of Cheek and honey, bathed in curry sauce and scarmoza cheese.",
+        dish_art_2_name: "UNEMPLOYED LOBSTER <span>40.50 €</span>",
+        dish_art_2_desc: "With organic egg and grandmother's potatoes.",
+        dish_art_3_name: "FRIED EGGS WITH SOBRASADA <span>18.50 €</span>",
+        dish_art_3_desc: "With potatoes, truffle oil, and a touch of spice.",
+        dish_art_4_name: "TRADITIONAL CANNELLONI <span>16.75 €</span>",
+        dish_art_4_desc: "Of roasted meat, with ceps béchamel and goat cheese.",
+        dish_art_5_name: "MOUNTAIN RICE WITH LOBSTER <span>35.00 €</span>",
+        dish_art_5_desc: "Creamy, with ceps and lobster. Minimum 2 people. Price per person.",
+        dish_art_6_name: "RICE WITH COUNTRY SAUSAGE <span>24.00 €</span>",
+        dish_art_6_desc: "With black garlic and ceps. Minimum 2 people. Price per person.",
 
-            // Experiències
-            experiences_eyebrow: "BV Moment",
-            experiences_h2: "A unique experience, beyond the meal.",
-            experiences_p1: "We have different spaces and private lounges for groups and special celebrations. Whether it's a family gathering, a corporate event, or an intimate evening, we will make your experience an unforgettable memory.",
-            experiences_cta: "Book Your Experience",
+        // Plats (Pàgina 3 - Plats Forts)
+        dish_main_1_name: "GRILLED VEAL RIBS <span>28.50 €</span>",
+        dish_main_1_desc: "Served with 'patatas a lo pobre' (poor man's potatoes).",
+        dish_main_2_name: "OLD COW ENTRECÔTE <span>29.50 €</span>",
+        dish_main_2_desc: "Grilled, with fleur de sel, served with garnish potatoes.",
+        dish_main_3_name: "GRILLED COW SIRLOIN <span>34.50 €</span>",
+        dish_main_3_desc: "With ceps and foie sauce.",
+        dish_main_4_name: "GRILLED OCTOPUS LEG <span>29.00 €</span>",
+        dish_main_4_desc: "With truffled mashed potatoes and 'pimentón de la Vera' (paprika).",
+        dish_main_5_name: "CONFIT COD LOIN <span>28.50 €</span>",
+        dish_main_5_desc: "With spinach and black garlic.",
+        
+        // Plats (Pàgina 4 - Postres)
+        dish_dessert_1_name: "CATALAN CREAM <span>7.00 €</span>",
+        dish_dessert_1_desc: "The classic, with its touch of cinnamon and lemon.",
+        dish_dessert_2_name: "APPLE TATIN <span>7.25 €</span>",
+        dish_dessert_2_desc: "With its Armagnac ice cream and marinated plums.",
+        dish_dessert_3_name: "THE COULANT <span>8.75 €</span>",
+        dish_dessert_3_desc: "Deadly sin of half-cooked chocolate coulant with olive oil and a pinch of salt.",
+        dish_dessert_4_name: "HOUSE SORBETS <span>5.75 €</span>",
+        dish_dessert_4_desc: "Gintonic and Lime, wild raspberries, Emerald Pistachio, and Mango.",
 
-            // Gastronomia
-            gastronomy_eyebrow: "Our Menu",
-            gastronomy_h2: "The best mountain cuisine, reinvented.",
-            gastronomy_p1: "From classics on the grill and mountain rice dishes, to seasonal plates with a touch of avant-garde.",
+        // Celler
+        cellar_eyebrow: "Our Cellar",
+        cellar_h2: "A high-altitude cellar for demanding palates.",
+        cellar_p1: "Our cellar is the soul of Borda Vella, a space that hosts our great passion for wines and meets the expectations of the most demanding palates.",
+        cellar_p2: "Our wine list includes international and national references. Choose your wine in our wine room. Our sommeliers will help you find the perfect pairing.",
 
-            // Títols de Seccions de la Carta
-            menu_section_1_title: "A snack to share and enjoy",
-            menu_section_2_title: "The art of cooking well",
-            menu_section_3_title: "The Main Courses",
-            menu_section_4_title: "THE LAST BITE", // CORREGIDO
+        // Contacte
+        contact_eyebrow: "Location",
+        contact_h2: "We are waiting for you in Encamp.",
+        contact_p1: "If you want to make a reservation, use the quick form above. For private events or inquiries, do not hesitate to call us.",
+        contact_find_us: "Find us:",
+        contact_address: "Carrer Major, s/n, AD200 Encamp, Andorra",
+        contact_gps: "GPS: 42.5342, 1.5835",
+        contact_phone: "+376 831 308",
+        contact_schedule_title: "Hours:",
+        // Horarios Corregidos
+        contact_schedule_1: "Tuesday - Saturday: 1:30 PM - 3:00 PM / 8:30 PM - 10:00 PM",
+        contact_schedule_2: "Monday and Sunday: Closed (Except holidays)",
 
-            // Plats (Pàgina 1 - Picar)
-            dish_1_name: "THE FOIE GRASS THAT CARESSES THE PALATE <span>22,50 €</span>",
-            dish_1_desc: "Made by Chef Manel.",
-            dish_2_name: "OLD COW FILLET CARPACCIO <span>19,50 €</span>",
-            dish_2_desc: "with foie gras, Truffle oil, BRUTAL!!!",
-            dish_3_name: "GALICIAN VEAL ENTRECOTE CARPACCIO <span>26,00 €</span>",
-            dish_3_desc: "By Albert Adrià (yes, that one!!!), intense and flavorful.",
-            dish_4_name: "SHRIMP CARPACCIO <span>22,00 €</span>",
-            dish_4_desc: "with an ice cream that takes you straight to the coast.",
-            dish_5_name: "OUR CAPRESE <span>19,50 €</span>",
-            dish_5_desc: "Italian Burrata, basil and tomato ice cream, pesto, Kalamata olive... all well bound, with a spoon.",
-            dish_6_name: "SANTOÑA ANCHOVIES (The Good Ones) <span>15,50 €</span>",
-            dish_6_desc: "Don Bocarte, 6 fillets to share, or not...",
-            dish_7_name: "GILDA GILDA GILDA <span>15,50 €</span>",
-            dish_7_desc: "Small, salty, and with a lot of nerve.",
-            dish_8_name: "COCA DE FOLGUEROLES BREAD <span>3,50 €</span>",
-            dish_8_desc: "With tomato, oil, and salt. No need to complicate. Bread supplement 1,75€. Gluten-free bread 3,50€.",
+        // Formularis
+        form_name: "Name and Surname",
+        form_email: "E-mail",
+        form_phone: "Phone",
+        form_date: "Date",
+        form_time: "Time",
+        form_people: "Guests",
+        form_submit: "Confirm Reservation",
 
-            // Plats (Pàgina 2 - L'art de coure bé)
-            dish_art_1_name: "CRISPY GYOZAS <span>16,00 €</span>",
-            dish_art_1_desc: "Of Cheek and honey, bathed in curry sauce and smoked scamorza cheese.",
-            dish_art_2_name: "JOBLESS LOBSTER <span>40,50 €</span>",
-            dish_art_2_desc: "With organic egg and grandma's potatoes.",
-            dish_art_3_name: "CANDIED ARTICHOKES <span>16,00 €</span>",
-            dish_art_3_desc: "With black truffle paste and foie gras.",
+        // Modal
+        modal_h2: "Book your Table.",
+        modal_p1: "Use this quick form to reserve your table. You will receive a confirmation in a few minutes."
+      },
+      fr: {
+        // Texts for the new dynamic accordion buttons
+        toggle_open: "Afficher les Plats",
+        toggle_close: "Masquer les Plats",
 
-            // Plats (Pàgina 3 - Els plats forts)
-            dish_strong_1_name: "VEAL CHEEK THAT MELTS ALONE <span>22,90 €</span>",
-            dish_strong_1_desc: "With a touch of cocoa and parmentier.",
-            dish_strong_2_name: "CROWNED OLD COW FILLET <span>32,20 €</span>",
-            dish_strong_2_desc: "Bathed in Porcini mushroom sauce, with baker's potatoes.",
-            dish_strong_3_name: "TROUT RICE SOUP <span>24,50 €</span>",
-            dish_strong_3_desc: "With free-range chicken, and seasonal mushrooms (minimum 2 people).",
-            dish_strong_4_name: "COD IN PIL PIL WITH CHORIZO OIL <span>28,50 €</span>",
-            dish_strong_4_desc: "With candied onion and a potato foam.",
+        // Header
+        title: "Borda Vella · Gastronomie de montagne à Encamp",
+        title_subtitle: "Encamp · Andorre",
+        nav_history: "Notre Histoire",
+        nav_gastronomy: "Gastronomie",
+        nav_cellar: "Cave",
+        nav_contact: "Contact",
+        nav_book_desktop: "Réserver Table",
 
-            // Plats (Pàgina 4 - Postres)
-            dish_dessert_1_name: "PASTOR'S MATÓ WITH HONEY AND WALNUTS <span>6,75 €</span>",
-            dish_dessert_1_desc: "The classic that never fails.",
-            dish_dessert_2_name: "APPLE TATIN <span>7,25 €</span>",
-            dish_dessert_2_desc: "With its Armagnac and macerated prune ice cream.",
-            dish_dessert_3_name: "THE COULANT <span>8,75 €</span>",
-            dish_dessert_3_desc: "Deadly sin chocolate semi-cooked coulant with olive oil and a pinch of salt.",
-            dish_dessert_4_name: "HOUSE SORBETS <span>5,75 €</span>",
-            dish_dessert_4_desc: "Of Gintonic and Lime, wild raspberries, Emerald Pistachio, and Mango.",
+        // Hero
+        hero_kicker: "Depuis 1972",
+        hero_h1: "L'authentique gastronomie de montagne d'Andorre.",
+        hero_p1: "Le lieu de rencontre idéal à Encamp. Cuisine à la braise, produits locaux et une carte des vins qui vous surprendra.",
+        hero_book_cta: "Réservez Maintenant",
+        hero_menu_cta: "Voir la Carte",
+        hero_phone: "Ou appelez-nous : ",
+        hero_phone_number: "+376 831 308",
+        hero_card_badge_group: '<span class="hero-badge-dot"></span> <span>Ouvert</span>',
+        hero_card_badge_text: "Ouvert",
+        hero_card_h3: "Réservation Rapide",
+        hero_card_p1: "Pour les réservations de moins de 8 personnes. Pour les groupes, veuillez nous appeler.",
+        hero_scroll: "Défiler",
 
-            // Celler
-            cellar_eyebrow: "Our Cellar",
-            cellar_h2: "A high-altitude cellar for demanding palates.",
-            cellar_p1: "Our cellar is the soul of Borda Vella, a space that hosts our great passion for wines and meets the expectations of the most demanding palates.",
-            cellar_p2: "Our wine list includes international and national references. Choose your wine in our wine room. Our sommeliers will help you find the perfect pairing.",
+        // Història
+        history_eyebrow: "Notre Histoire",
+        history_h2: "L'essence de la cuisine de montagne, avec une nouvelle vision.",
+        history_p1: "Borda Vella a ouvert ses portes en 1972, devenant l'un des restaurants les plus emblématiques d'Encamp et d'Andorre. Son histoire est celle des 'bordes' andorranes (maisons de montagne traditionnelles), où la <strong>tradition</strong>, le <strong>produit du terroir</strong> et l'<strong>hospitalité</strong> sont les piliers fondamentaux. Au fil des ans, notre Chef, Manel Morgade, a perfectionné son art dans des cuisines 1 Étoile Michelin et des hôtels 5 étoiles. Il a abordé ce projet avec une philosophie claire : <strong>vivre pour manger et cuisiner pour partager</strong> la saveur authentique. Le <strong>feu</strong> est le cœur de sa cuisine, et notre brasero est la scène où il transforme la matière première, honorant le produit avec l'honnêteté des flammes. Ici, deux héritages fusionnent : la <strong>tradition inébranlable de la montagne</strong> et la <strong>vision sans complexe d'un Chef</strong> qui a dédié sa vie à la gastronomie. Borda Vella est la promesse de notre Chef d'offrir une expérience authentique où la saveur de la tradition et l'audace culinaire se rencontrent à votre table.",
+        history_pill_1_title: "Cuisine à la Braise",
+        history_pill_1_text: "Le feu comme technique culinaire.",
+        history_pill_2_title: "Produit d'Auteur",
+        history_pill_2_text: "Vision et technique de Chef Michelin.",
+        history_pill_3_title: "Borda Traditionnelle",
+        history_pill_3_text: "Le charme rustique d'Encamp.",
 
-            // Contacte
-            contact_eyebrow: "Location",
-            contact_h2: "We await you in Encamp.",
-            contact_p1: "If you want to book, use the quick form above. For private events or inquiries, do not hesitate to call us.",
-            contact_find_us: "Find Us:",
-            contact_address: "Carrer Major, s/n, AD200 Encamp, Andorra",
-            contact_gps: "GPS: 42.5342, 1.5835",
-            contact_phone: "+376 831 308",
-            contact_schedule_title: "Hours:", 
-            contact_schedule_1: "Tuesday - Saturday: 1:30 PM - 3:00 PM / 8:30 PM - 10:00 PM",
-            contact_schedule_2: "Monday and Sunday: Closed (Except Holidays)",
+        // Experiències
+        experiences_eyebrow: "Moment BV",
+        experiences_h2: "Une expérience unique, au-delà du repas.",
+        experiences_p1: "Nous disposons de différents espaces et salons privés pour groupes et célébrations spéciales. Qu'il s'agisse d'une réunion de famille, d'un événement d'entreprise ou d'une soirée intime, nous ferons de votre expérience un souvenir inoubliable.",
+        experiences_cta: "Réservez votre Expérience",
 
-            // Formularis
-            form_name: "Name and Last Name",
-            form_email: "Email",
-            form_phone: "Phone",
-            form_date: "Date",
-            form_time: "Time",
-            form_people: "Diners",
-            form_submit: "Confirm Reservation",
+        // Gastronomia
+        gastronomy_eyebrow: "Notre Carte",
+        gastronomy_h2: "La meilleure cuisine de montagne, réinventée.",
+        gastronomy_p1: "Des classiques à la braise et riz de montagne, aux plats de saison avec une touche d'avant-garde.",
 
-            // Modal
-            modal_h2: "Book your table",
-            modal_p1: "Fill out the following form to confirm your reservation. You will receive a confirmation in your email.",
+        // Títols de Seccions de la Carta
+        menu_section_1_title: "Une petite entrée à grignoter et à partager",
+        menu_section_2_title: "L'art de bien cuire",
+        menu_section_3_title: "Les Plats Principaux",
+        menu_section_4_title: "La Dernière Bouchée",
 
-            // Footer
-            footer_copy: "All rights reserved.",
-        },
-        fr: {
-            // Texts for the new dynamic accordion buttons
-            toggle_open: "Afficher Plats",
-            toggle_close: "Masquer Plats",
+        // Plats (Pàgina 1 - Picar)
+        dish_1_name: "LE FOIE QUI CARESSE LE PALAIS <span>22,50 €</span>",
+        dish_1_desc: "Fait par le Chef Manel.",
+        dish_2_name: "CARPACCIO DE FILET DE VIEILLE VACHE <span>19,50 €</span>",
+        dish_2_desc: "au foie, huile de Truffe, BRUTAL!!!",
+        dish_3_name: "CARPACCIO D'ENTRECÔTE DE VEAU GALICIEN <span>26,00 €</span>",
+        dish_3_desc: "D'Albert Adrià (oui, celui-là!), intense et savoureux.",
+        dish_4_name: "CARPACCIO DE CREVETTE <span>22,00 €</span>",
+        dish_4_desc: "Avec huile de basilic et fruit de la passion à côté.",
+        dish_5_name: "LA NOSTRA CAPRESE <span>19,50 €</span>",
+        dish_5_desc: "Burrata Italienne, glaces au basilic et à la tomate, pesto, olive Kalamata... le tout bien lié, avec une cuillère.",
+        dish_6_name: "ANCHOIS DE SANTOÑA (Les Bons) <span>15,50 €</span>",
+        dish_6_desc: "Don Bocarte, 6 filets à partager, ou pas...",
+        dish_7_name: "GILDA GILDA GILDA <span>15,50 €</span>",
+        dish_7_desc: "Petites, salées et avec beaucoup de nerf.",
+        dish_8_name: "PAIN COCA DE FOLGUEROLES <span>3,50 €</span>",
+        dish_8_desc: "Avec tomate, huile et sel. Pas besoin de compliquer. Supplément pain 1,75€. Pain sans gluten 3,50€.",
 
-            // Header
-            title: "Borda Vella · Gastronomie de montagne à Encamp",
-            title_subtitle: "Encamp · Andorre",
-            nav_history: "Histoire",
-            nav_gastronomy: "Gastronomie",
-            nav_cellar: "Cave",
-            nav_contact: "Contact",
-            nav_book_desktop: "Réserver Table",
+        // Plats (Pàgina 2 - L'art de coure bé)
+        dish_art_1_name: "GYOZAS CROUSTILLANTES <span>16,00 €</span>",
+        dish_art_1_desc: "De Joue et miel, baignées dans une sauce au curry et fromage scarmoza fumé.",
+        dish_art_2_name: "HOMARD SANS EMPLOI <span>40,50 €</span>",
+        dish_art_2_desc: "Avec œuf BIO et pommes de terre de grand-mère.",
+        dish_art_3_name: "ŒUFS FRITS À LA SOBRASADA <span>18,50 €</span>",
+        dish_art_3_desc: "Avec pommes de terre, huile de truffe, et une touche de piquant.",
+        dish_art_4_name: "CANNELLONI TRADITIONNEL <span>16,75 €</span>",
+        dish_art_4_desc: "De viande rôtie, avec béchamel de cèpes et fromage de chèvre.",
+        dish_art_5_name: "RIZ DE MONTAGNE AU HOMARD <span>35,00 €</span>",
+        dish_art_5_desc: "Crémeux, aux cèpes et homard. Minimum 2 personnes. Prix par personne.",
+        dish_art_6_name: "RIZ À LA SAUCISSE DU PAYS <span>24,00 €</span>",
+        dish_art_6_desc: "À l'ail noir et aux cèpes. Minimum 2 personnes. Prix par personne.",
 
-            // Hero
-            hero_kicker: "Depuis 1972",
-            hero_h1: "L'authentique gastronomie de montagne d'Andorre.",
-            hero_p1: "Le point de rencontre idéal à Encamp. Cuisine à la braise, produits locaux et une carte des vins qui vous surprendra.",
-            hero_book_cta: "Réserver Maintenant",
-            hero_menu_cta: "Voir la Carte",
-            hero_phone: "Ou appelez-nous: ",
-            hero_phone_number: "+376 831 308",
-            hero_card_badge_group: '<span class="hero-badge-dot"></span> <span data-i18n="hero_card_badge">Ouvert Aujourd\'hui</span>',
-            hero_card_badge: "Ouvert Aujourd'hui",
-            hero_card_h3: "Réservation Rapide",
-            hero_card_p1: "Pour les réservations de moins de 8 personnes. Pour les groupes, veuillez nous appeler.",
-            hero_scroll: "Défiler",
+        // Plats (Pàgina 3 - Plats Forts)
+        dish_main_1_name: "CÔTES DE VEAU À LA BRAISE <span>28,50 €</span>",
+        dish_main_1_desc: "Servies avec des 'patatas a lo pobre' (pommes de terre du pauvre).",
+        dish_main_2_name: "ENTRECÔTE DE VIEILLE VACHE <span>29,50 €</span>",
+        dish_main_2_desc: "À la braise, à la fleur de sel, servie avec des pommes de terre d'accompagnement.",
+        dish_main_3_name: "FILET DE VACHE À LA BRAISE <span>34,50 €</span>",
+        dish_main_3_desc: "Avec sauce aux cèpes et foie.",
+        dish_main_4_name: "PATTE DE POULPE À LA BRAISE <span>29,00 €</span>",
+        dish_main_4_desc: "Avec purée de pommes de terre truffée et paprika de la Vera.",
+        dish_main_5_name: "DOS DE MORUE CONFIT <span>28,50 €</span>",
+        dish_main_5_desc: "Aux épinards et ail noir.",
+        
+        // Plats (Pàgina 4 - Postres)
+        dish_dessert_1_name: "CRÈME CATALANE <span>7,00 €</span>",
+        dish_dessert_1_desc: "La classique, avec sa touche de cannelle et de citron.",
+        dish_dessert_2_name: "TATIN DE POMME <span>7,25 €</span>",
+        dish_dessert_2_desc: "Avec sa glace à l'Armagnac et ses prunes macérées.",
+        dish_dessert_3_name: "LE COULANT <span>8,75 €</span>",
+        dish_dessert_3_desc: "Coulant péché mortel au chocolat mi-cuit avec huile d'olive et une pincée de sel.",
+        dish_dessert_4_name: "SORBETS MAISON <span>5,75 €</span>",
+        dish_dessert_4_desc: "De Gintonic et Citron Vert, framboises sauvages, Pistache Émeraude, et Mangue.",
 
-            // Història
-            history_eyebrow: "Notre Héritage",
-            history_h2: "Cuisine de Borda, Vision de Chef.",
-            history_p1: "Borda Vella a ouvert ses portes en 1972, devenant l'un des restaurants les plus emblématiques d'Encamp et d'Andorre. Son histoire est celle des 'bordas' andorranes, où la <strong>tradition</strong>, le <strong>produit du territoire</strong> et l'<strong>hospitalité</strong> sont les piliers fondamentaux. Au fil des ans, notre Chef, Manel Morgade, a perfectionné son art dans des cuisines étoilées Michelin et des hôtels 5 étoiles. Il a repris ce projet avec une philosophie claire : <strong>vivre pour manger et cuisiner pour partager</strong> la saveur authentique. Le <strong>feu</strong> est le cœur de sa cuisine, et notre braise est la scène où il transforme la matière première, honorant le produit avec l'honnêteté des flammes. Ici, deux héritages fusionnent : la <strong>tradition inébranlable de la montagne</strong> et la <strong>vision sans complexe d'un Chef</strong> qui a dédié sa vie à la gastronomie. Borda Vella est la promesse de notre Chef d'offrir une expérience authentique où la saveur de la tradition et l'audace culinaire se rencontrent à votre table.",
-            history_pill_1_title: "Cuisine à la Braise",
-            history_pill_1_text: "Le feu comme technique culinaire.",
-            history_pill_2_title: "Produit d'Auteur",
-            history_pill_2_text: "Vision et technique de Chef Michelin.",
-            history_pill_3_title: "Borda Traditionnelle",
-            history_pill_3_text: "Le charme rustique d'Encamp.",
+        // Celler
+        cellar_eyebrow: "Notre Cave",
+        cellar_h2: "Une cave en altitude pour les palais exigeants.",
+        cellar_p1: "Notre cave est l'âme de Borda Vella, un espace qui accueille notre grande passion pour les vins et répond aux attentes des palais les plus exigeants.",
+        cellar_p2: "Notre carte des vins comprend des références internationales et nationales. Choisissez votre vin dans notre salle des vins. Nos sommeliers vous aideront à trouver l'accord parfait.",
 
-            // Experiències
-            experiences_eyebrow: "Moment BV",
-            experiences_h2: "Une expérience unique, au-delà du repas.",
-            experiences_p1: "Nous disposons de différents espaces et salons privés pour les groupes et les célébrations spéciales. Que ce soit une réunion de famille, un événement d'entreprise ou une soirée intime, nous ferons de votre expérience un souvenir inoubliable.",
-            experiences_cta: "Réservez votre Expérience",
+        // Contacte
+        contact_eyebrow: "Localisation",
+        contact_h2: "Nous vous attendons à Encamp.",
+        contact_p1: "Si vous souhaitez réserver, utilisez le formulaire rapide ci-dessus. Pour des événements privés ou des consultations, n'hésitez pas à nous appeler.",
+        contact_find_us: "Trouvez-nous :",
+        contact_address: "Carrer Major, s/n, AD200 Encamp, Andorre",
+        contact_gps: "GPS: 42.5342, 1.5835",
+        contact_phone: "+376 831 308",
+        contact_schedule_title: "Heures :",
+        // Horarios Corregidos
+        contact_schedule_1: "Mardi - Samedi : 13:30 - 15:00 / 20:30 - 22:00",
+        contact_schedule_2: "Lundi et Dimanche : Fermé (Sauf jours fériés)",
 
-            // Gastronomia
-            gastronomy_eyebrow: "Notre Carte",
-            gastronomy_h2: "La meilleure cuisine de montagne, réinventée.",
-            gastronomy_p1: "Des classiques à la braise et riz de montagne, aux plats de saison avec une touche d'avant-garde.",
+        // Formularis
+        form_name: "Nom et Prénom",
+        form_email: "E-mail",
+        form_phone: "Téléphone",
+        form_date: "Date",
+        form_time: "Heure",
+        form_people: "Invités",
+        form_submit: "Confirmer la Réservation",
 
-            // Títols de Seccions de la Carta
-            menu_section_1_title: "Une dégustation à picorer et à savourer",
-            menu_section_2_title: "L'art de bien cuisiner",
-            menu_section_3_title: "Les Plats Forts",
-            menu_section_4_title: "LA DERNIÈRE BOUCHÉE", // CORREGIDO
-
-            // Plats (Pàgina 1 - Picar)
-            dish_1_name: "LE FOIE GRAS QUI CARESSE LE PALAIS <span>22,50 €</span>",
-            dish_1_desc: "Fait par le Chef Manel.",
-            dish_2_name: "CARPACCIO DE FILET DE VIEILLE VACHE <span>19,50 €</span>",
-            dish_2_desc: "avec foie gras, huile de Truffe, BRUTAL !!!",
-            dish_3_name: "CARPACCIO D'ENTRECÔTE DE VEAU GALICIEN <span>26,00 €</span>",
-            dish_3_desc: "D'Albert Adrià (oui, celui-là !!!), intense et savoureux.",
-            dish_4_name: "CARPACCIO DE CREVETTE <span>22,00 €</span>",
-            dish_4_desc: "avec une glace qui vous emmène directement à la côte.",
-            dish_5_name: "LA NOSTRA CAPRESE <span>19,50 €</span>",
-            dish_5_desc: "Burrata Italienne, glaces au basilic et à la tomate, pesto, olive Kalamata... le tout bien lié, avec une cuillère.",
-            dish_6_name: "ANCHOIS DE SANTOÑA (Les Bons) <span>15,50 €</span>",
-            dish_6_desc: "Don Bocarte, 6 filets à partager, ou pas...",
-            dish_7_name: "GILDA GILDA GILDA <span>15,50 €</span>",
-            dish_7_desc: "Petites, salées et avec beaucoup de nerf.",
-            dish_8_name: "PAIN COCA DE FOLGUEROLES <span>3,50 €</span>",
-            dish_8_desc: "Avec tomate, huile et sel. Pas besoin de compliquer. Supplément pain 1,75€. Pain sans gluten 3,50€.",
-
-            // Plats (Pàgina 2 - L'art de coure bé)
-            dish_art_1_name: "GYOZAS CROUSTILLANTES <span>16,00 €</span>",
-            dish_art_1_desc: "De Joue et miel, baignées dans une sauce au curry et fromage scarmoza fumé.",
-            dish_art_2_name: "HOMARD SANS EMPLOI <span>40,50 €</span>",
-            dish_art_2_desc: "Avec œuf BIO et pommes de terre de grand-mère.",
-            dish_art_3_name: "ARTICHAUTS CONFITS <span>16,00 €</span>",
-            dish_art_3_desc: "Avec pâte de truffe noire et foie gras.",
-
-            // Plats (Pàgina 3 - Les plats forts)
-            dish_strong_1_name: "JOUE DE VEAU QUI FOND TOUTE SEULE <span>22,90 €</span>",
-            dish_strong_1_desc: "Avec une touche de cacao et parmentier.",
-            dish_strong_2_name: "FILET DE VIEILLE VACHE COURONNÉ <span>32,20 €</span>",
-            dish_strong_2_desc: "Nappé de sauce aux Cèpes, avec pommes de terre de boulanger.",
-            dish_strong_3_name: "RIZ SOUPENEUX À LA TRUITE <span>24,50 €</span>",
-            dish_strong_3_desc: "Avec poulet fermier, et champignons de saison (minimum 2 personnes).",
-            dish_strong_4_name: "MORUE AU PIL PIL AVEC HUILE DE CHORIZO <span>28,50 €</span>",
-            dish_strong_4_desc: "Avec oignon confit et une mousse de pomme de terre.",
-
-            // Plats (Pàgina 4 - Postres)
-            dish_dessert_1_name: "MATÓ DU BERGER AVEC MIEL ET NOIX <span>6,75 €</span>",
-            dish_dessert_1_desc: "Le classique qui ne manque jamais.",
-            dish_dessert_2_name: "TATIN DE POMME <span>7,25 €</span>",
-            dish_dessert_2_desc: "Avec sa glace à l'Armagnac et aux pruneaux macérés.",
-            dish_dessert_3_name: "LE COULANT <span>8,75 €</span>",
-            dish_dessert_3_desc: "Péché mortel coulant au chocolat mi-cuit avec huile d'olive et un peu de sel.",
-            dish_dessert_4_name: "SORBETS DE LA MAISON <span>5,75 €</span>",
-            dish_dessert_4_desc: "Au Gintonic et Citron Vert, framboises sauvages, Pistache Émeraude, et Mangue.",
-
-            // Celler
-            cellar_eyebrow: "Notre Cave",
-            cellar_h2: "Une cave en altitude pour les palais exigeants.",
-            cellar_p1: "Notre cave est l'âme de Borda Vella, un espace qui accueille notre grande passion pour les vins et répond aux attentes des palais les plus exigeants.",
-            cellar_p2: "Notre carte des vins comprend des références internationales et nationales. Choisissez votre vin dans notre salle des vins. Nos sommeliers vous aideront à trouver l'accord parfait.",
-
-            // Contacte
-            contact_eyebrow: "Localisation",
-            contact_h2: "Nous vous attendons à Encamp.",
-            contact_p1: "Si vous souhaitez réserver, utilisez le formulaire rapide ci-dessus. Pour des événements privés ou des consultations, n'hésitez pas à nous appeler.",
-            contact_find_us: "Trouvez-nous :",
-            contact_address: "Carrer Major, s/n, AD200 Encamp, Andorre",
-            contact_gps: "GPS: 42.5342, 1.5835",
-            contact_phone: "+376 831 308",
-            contact_schedule_title: "Heures :", 
-            contact_schedule_1: "Mardi - Samedi : 13:30 - 15:00 / 20:30 - 22:00",
-            contact_schedule_2: "Lundi et Dimanche : Fermé (Sauf Jours Fériés)",
-
-            // Formularis
-            form_name: "Nom et Prénom",
-            form_email: "Email",
-            form_phone: "Téléphone",
-            form_date: "Date",
-            form_time: "Heure",
-            form_people: "Convives",
-            form_submit: "Confirmer la Réservation",
-
-            // Modal
-            modal_h2: "Réservez votre table",
-            modal_p1: "Remplissez le formulaire suivant pour confirmer votre réservation. Vous recevrez une confirmation par email.",
-
-            // Footer
-            footer_copy: "Tous droits réservés.",
-        }
+        // Modal
+        modal_h2: "Réservez votre Table.",
+        modal_p1: "Utilisez ce formulaire rapide pour réserver votre table. Vous recevrez une confirmation dans quelques minutes."
+      }
     };
 
-
     // ==============================================
-    // LÓGICA DE TRADUCCIÓN (i18n Implementation)
+    // LÓGICA DE INTERFAZ (DOM manipulation)
     // ==============================================
-    let currentLang = 'ca'; // Default language
 
-    function updateContent(lang) {
-        currentLang = lang;
-        const translations = i18n[lang];
+    // Function to apply texts based on the current language
+    function setLanguage(lang) {
+      const texts = i18n[lang];
+      if (!texts) return;
 
-        // Update all elements with data-i18n attribute
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            if (translations[key] !== undefined) {
-                // Handle different types of content
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    // Update placeholders for input fields if necessary (not used much here, but good practice)
-                    // element.placeholder = translations[key];
-                } else if (element.tagName === 'TITLE') {
-                    document.title = translations[key];
-                } else if (element.tagName === 'SPAN' && element.hasAttribute('data-i18n-html')) {
-                    // For spans that need HTML (like the badge group)
-                    element.innerHTML = translations[key];
+      // Set body attribute for CSS hooks
+      document.body.setAttribute('data-lang', lang);
+
+      // Update all elements with data-i18n attributes
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        
+        // Handle nested HTML (like in hero_card_badge_group)
+        if (texts[key] && texts[key].includes('<') && texts[key].includes('>')) {
+            element.innerHTML = texts[key];
+        } else if (texts[key]) {
+            // Standard text update
+            if (element.tagName === 'TITLE') {
+                element.textContent = texts[key];
+            } else if (element.tagName === 'INPUT' && element.type === 'submit') {
+                element.value = texts[key];
+            } else if (element.tagName === 'BUTTON') {
+                // For buttons, use innerText to avoid overwriting icons if they exist
+                if (element.querySelector('.button-text')) {
+                    element.querySelector('.button-text').textContent = texts[key];
                 } else {
-                    // Default to textContent
-                    element.innerHTML = translations[key];
+                    element.textContent = texts[key];
                 }
+            } else {
+                element.textContent = texts[key];
             }
-        });
-
-        // Update language switch buttons active state
-        document.querySelectorAll('.lang-switch button').forEach(button => {
-            button.classList.remove('active');
-            if (button.getAttribute('data-lang') === lang) {
-                button.classList.add('active');
-            }
-        });
-
-        // Update titles that are composed of multiple elements (like the logo)
-        const logo = document.querySelector('.logo');
-        if (logo) {
-            logo.innerHTML = `Borda Vella<span data-i18n="title_subtitle">${translations.title_subtitle}</span>`;
-            // Re-select and re-apply i18n for the newly created span if needed, but it's simple enough here
         }
+      });
+      
+      // Special handling for the phone number link (hero section)
+      const heroPhoneAnchor = document.querySelector('.hero-phone a');
+      const phoneNumber = texts['hero_phone_number'];
+      if (heroPhoneAnchor && phoneNumber) {
+          heroPhoneAnchor.href = `tel:${phoneNumber.replace(/\s/g, '')}`; // Remove spaces for the tel: link
+          // Ensure the text is correct inside the p tag
+          heroPhoneAnchor.textContent = phoneNumber;
+      }
+      
+      // Update toggle button text manually for open state (if applicable)
+      document.querySelectorAll('[data-menu-accordion]').forEach(container => {
+        const button = container.querySelector('.toggle-button');
+        if (button && container.classList.contains('open')) {
+            button.querySelector('.button-text').textContent = texts['toggle_close'];
+        }
+      });
+
+      // Update active language button
+      document.querySelectorAll('.lang-switch button').forEach(button => {
+        button.classList.remove('active');
+      });
+      document.querySelector(`.lang-switch button[data-lang="${lang}"]`).classList.add('active');
     }
 
-    // Initialize translations on page load
-    document.addEventListener('DOMContentLoaded', () => {
-        updateContent(currentLang);
-    });
+    // Initialize with Catalan (default)
+    setLanguage('ca');
 
-    // Add event listeners for language switching
+    // Attach language switch event listeners
     document.querySelectorAll('.lang-switch button').forEach(button => {
-        button.addEventListener('click', () => {
-            const newLang = button.getAttribute('data-lang');
-            updateContent(newLang);
-        });
+      button.addEventListener('click', () => {
+        const lang = button.getAttribute('data-lang');
+        setLanguage(lang);
+      });
     });
 
-    // ==============================================
-    // LÓGICA DE UI/INTERACCIÓN
-    // ==============================================
-
-    // --- LÓGICA DE HEADER SCROLL ---
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('solid');
-            header.classList.remove('transparent');
-        } else {
-            header.classList.remove('solid');
-            header.classList.add('transparent');
-        }
-    });
-
-    // --- LÓGICA DE ACORDEÓN DE MENÚ (Gastronomia) ---
-    document.querySelectorAll('[data-menu-accordion]').forEach(accordion => {
-        const header = accordion.querySelector('.accordion-header');
-        const body = accordion.querySelector('.accordion-body');
-        const button = accordion.querySelector('[data-toggle-accordion]');
-        const buttonText = button.querySelector('.button-text');
-
-        header.addEventListener('click', (e) => {
-            // Check if the click target is the button or an element inside it
-            if (e.target !== button && !button.contains(e.target)) {
-                 // If the click is on the header but not the button, simulate a button click
-                 button.click();
-                 return; 
-            }
-        });
-
-        button.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent the click from bubbling up to the header's listener
-            const isOpen = accordion.classList.toggle('open');
-            
-            // Update button text based on the new state
-            buttonText.innerHTML = isOpen ? i18n[currentLang].toggle_close : i18n[currentLang].toggle_open;
-            
-            // Update the icon (optional, as CSS handles rotation)
-        });
-    });
-
-    // --- LÓGICA DE MENÚ MÓVIL ---
+    // --- LÓGICA DE NAVEGACIÓN Y HEADER ---
+    
+    // Toggle Mobile Menu
     const mobileMenu = document.querySelector('[data-mobile-menu]');
-    const openMenuButtons = document.querySelectorAll('[data-open-mobile-menu]');
-    const closeMenuButtons = document.querySelectorAll('[data-close-mobile-menu]');
+    const openMenuButton = document.querySelector('[data-open-mobile-menu]');
+    const closeMenuButtons = document.querySelectorAll('[data-close-mobile-menu]'); // Links in menu also close it
 
-    if (mobileMenu) {
-        openMenuButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                mobileMenu.classList.add('open');
-                document.body.classList.add('no-scroll');
-            });
+    openMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      document.body.classList.add('no-scroll');
+    });
+
+    closeMenuButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        document.body.classList.remove('no-scroll');
+      });
+    });
+
+    // Header Scroll Effect
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.remove('transparent');
+        header.classList.add('solid');
+      } else {
+        header.classList.remove('solid');
+        header.classList.add('transparent');
+      }
+    });
+
+    // Smooth Scroll for Internal Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
         });
+      });
+    });
 
-        closeMenuButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                mobileMenu.classList.remove('open');
-                document.body.classList.remove('no-scroll');
-            });
-        });
-    }
 
-    // --- LÓGICA DE MODAL DE RESERVA ---
-    const modal = document.querySelector('[data-reserva-modal]');
+    // --- LÓGICA DE ACORDEÓN (MENÚ) ---
+    document.querySelectorAll('[data-menu-accordion]').forEach(container => {
+      const header = container.querySelector('.accordion-header');
+      const button = container.querySelector('[data-toggle-accordion]');
+      const buttonTextSpan = button.querySelector('.button-text');
+      const lang = document.body.getAttribute('data-lang') || 'ca';
+
+      const toggleAccordion = () => {
+        const isCurrentlyOpen = container.classList.toggle('open');
+        const currentLang = document.body.getAttribute('data-lang') || 'ca';
+        
+        if (isCurrentlyOpen) {
+          buttonTextSpan.textContent = i18n[currentLang].toggle_close;
+        } else {
+          buttonTextSpan.textContent = i18n[currentLang].toggle_open;
+        }
+      };
+      
+      header.addEventListener('click', toggleAccordion);
+      button.addEventListener('click', (e) => {
+          e.stopPropagation(); // Prevents the header's click handler from firing twice
+          toggleAccordion();
+      });
+    });
+
+    // --- LÓGICA DE MODAL (RESERVA) ---
+    const modal = document.querySelector('[data-modal-reserva]');
     const openModalButtons = document.querySelectorAll('[data-open-reserva]');
     const closeModalButtons = document.querySelectorAll('[data-close-reserva]');
-
+    
     if (modal) {
         openModalButtons.forEach(button => {
             button.addEventListener('click', () => {
@@ -2251,7 +2279,7 @@
     // Set current year for footer
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
-</script>
+  </script>
 
 </body>
 </html>
